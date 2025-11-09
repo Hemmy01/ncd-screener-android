@@ -1,93 +1,159 @@
-# final-project-group-af
+# MediTrack - Patient Medication Tracker
 
+## Project Proposal
+**Project Name:** `final-project-group-af`  
+**Course:** Mobile Programming  
+**Group:** AF  
+**Submission Date:** [Current Date]
 
+## Team Composition
+| Name | Student ID | Primary Responsibility |
+|------|------------|---------------------|
+| Uwera Masereri Prisca | 25570 | Patient Data Management |
+| Hirwa Germain | 25571 | Medication List Interface |
+| Ikuzwe Nfuranzima O neal Dauphin | 24714 | Medication Details Display |
+| Familoni Emmanuel Eniola | 25951 | FHIR API Integration |
+| Iradukunda Oscar | 26281 | Data Processing & Parsing |
+| Gahunde Simbi Gloria | 25435 | Notification System |
+| Murenzi Munyaburanga Ivan | 25868 | User Interface Design |
+| Mbabazi Yvette | 25946 | Application Navigation |
+| Ishimwe Alain Pacifique | 26567 | Quality Assurance |
 
-## Getting started
+## 1. Project Concept
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+### Problem Statement
+Patients often struggle with medication adherence due to complex prescription regimens, lack of clear dosage instructions, and forgetfulness. Current solutions lack seamless integration with standardized healthcare data systems, leading to medication errors and poor health outcomes.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+### Proposed Solution
+MediTrack is an Android application that leverages FHIR (Fast Healthcare Interoperability Resources) standards to provide patients with secure, real-time access to their prescribed medications. The app transforms complex medical data into an intuitive interface that promotes medication adherence through clear information display and timely reminders.
 
-## Add your files
+## 2. FHIR Integration Strategy
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
+### Core FHIR Resources Utilization
+Our solution will primarily utilize the **`MedicationRequest`** resource as the foundation for medication management, complemented by supporting resources:
 
+**Primary Resources:**
+- **`MedicationRequest`**: Core prescription data including:
+  - Medication identification and coding
+  - Dosage instructions (timing, frequency, route, quantity)
+  - Prescription status and validity periods
+  - Patient and prescriber references
+
+**Supporting Resources:**
+- **`Patient`**: Demographic context and identification
+- **`Medication`**: Detailed pharmaceutical information
+
+### FHIR API Implementation
+We will implement the following FHIR RESTful API endpoints:
+
+```http
+# Retrieve active patient medications
+GET /MedicationRequest?patient={patientId}&status=active
+
+# Access patient demographic information
+GET /Patient/{patientId}
+
+# Fetch detailed medication information
+GET /Medication/{medicationId}
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/final-project-group-af/final-project-group-af.git
-git branch -M main
-git push -uf origin main
-```
 
-## Integrate with your tools
+### FHIR Server Configuration
+- **Development Server**: HAPI FHIR Public Test Server (`http://hapi.fhir.org/baseR4`)
+- **Data Standards**: FHIR R4 specification
+- **Authentication**: Open access for prototype development
 
-- [ ] [Set up project integrations](https://gitlab.com/final-project-group-af/final-project-group-af/-/settings/integrations)
+## 3. Technical Approach
 
-## Collaborate with your team
+### Development Framework
+- **Platform**: Android Native
+- **Programming Language**: Java
+- **IDE**: Android Studio
+- **Architecture Pattern**: MVVM (Model-View-ViewModel)
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
+### Key Technical Components
+1. **Data Layer**
+   - Retrofit for FHIR API communication
+   - Gson for JSON parsing of FHIR resources
+   - Repository pattern for data abstraction
 
-## Test and Deploy
+2. **Presentation Layer**
+   - RecyclerView for medication lists
+   - Fragment-based navigation
+   - LiveData for reactive UI updates
 
-Use the built-in continuous integration in GitLab.
+3. **Business Logic Layer**
+   - ViewModel for UI data management
+   - WorkManager for notification scheduling
+   - Custom utilities for FHIR data processing
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+## 4. Feature Specifications
 
-***
+### Core Features
+1. **Medication Dashboard**
+   - Display active prescriptions in organized list
+   - Show medication status and next dose timing
+   - Quick access to detailed information
 
-# Editing this README
+2. **Dosage Management**
+   - Clear presentation of dosage instructions
+   - Administration route and frequency display
+   - Timing and scheduling information
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+3. **Reminder System**
+   - Configurable medication intake alerts
+   - Push notification capabilities
+   - Customizable scheduling options
 
-## Suggestions for a good README
+4. **Patient Information**
+   - Secure display of patient demographics
+   - Medication history overview
+   - Prescriber information access
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+## 5. Implementation Plan
 
-## Name
-Choose a self-explaining name for your project.
+### Phase 1: Foundation (Week 1-2)
+- Project setup and repository configuration
+- FHIR API integration and testing
+- Basic UI framework establishment
+- Data models and parsing implementation
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+### Phase 2: Core Features (Week 3-4)
+- Medication list and detail interfaces
+- Notification system development
+- Navigation and user flow optimization
+- Initial integration testing
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+### Phase 3: Refinement (Week 5-6)
+- UI/UX polishing and styling
+- Comprehensive testing and bug fixes
+- Performance optimization
+- Documentation completion
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+## 6. Expected Outcomes
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+### Technical Deliverables
+- Fully functional Android application
+- Complete FHIR API integration
+- Comprehensive documentation
+- Source code with version control history
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+### User Benefits
+- Improved medication adherence through reminders
+- Better understanding of prescription regimens
+- Secure access to personal health information
+- Enhanced patient engagement in healthcare
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+## 7. Innovation Value
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+This project demonstrates the practical application of FHIR standards in mobile health solutions, showcasing how standardized healthcare APIs can be leveraged to create patient-centric applications that bridge the gap between complex medical data and everyday healthcare management.
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+## 8. Compliance & Standards
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+- **FHIR R4** compliance for healthcare data interoperability
+- **Android development** best practices
+- **Data privacy** principles through read-only FHIR access
+- **Healthcare standards** adherence through proper resource utilization
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+---
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+**Approval Requested:** This proposal outlines our approach to developing a FHIR-compliant medication tracking application that addresses real-world healthcare challenges through modern mobile technology and standardized data exchange.
