@@ -4,7 +4,7 @@
 **Project Name:** `final-project-group-af`  
 **Course:** Mobile Programming  
 **Group:** AF  
-**Submission Date:** [Current Date]
+**Submission Date:** 9th November 2025
 
 ## Team Composition
 | Name | Student ID | Primary Responsibility |
