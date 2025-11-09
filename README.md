@@ -111,19 +111,19 @@ GET /Medication/{medicationId}
 
 ## 5. Implementation Plan
 
-### Phase 1: Foundation (Week 1-2)
+### Phase 1: Foundation 
 - Project setup and repository configuration
 - FHIR API integration and testing
 - Basic UI framework establishment
 - Data models and parsing implementation
 
-### Phase 2: Core Features (Week 3-4)
+### Phase 2: Core Features 
 - Medication list and detail interfaces
 - Notification system development
 - Navigation and user flow optimization
 - Initial integration testing
 
-### Phase 3: Refinement (Week 5-6)
+### Phase 3: Refinement 
 - UI/UX polishing and styling
 - Comprehensive testing and bug fixes
 - Performance optimization
