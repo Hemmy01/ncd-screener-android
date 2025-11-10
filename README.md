@@ -69,3 +69,139 @@ POST /Condition
 # Create referral to health facility
 POST /ServiceRequest
 ```
+
+## FHIR Server Configuration
+
+- **Development Server:** HAPI FHIR Public Test Server (`http://hapi.fhir.org/baseR4`)
+- **FHIR Version:** R4
+- **Authentication:** Open access for prototype development
+- **Data Format:** JSON
+
+---
+
+## 3. Technical Approach
+
+### Development Framework
+
+- **Platform:** Android Native
+- **Programming Language:** Java
+- **IDE:** Android Studio
+- **Architecture Pattern:** MVVM (Model-View-ViewModel)
+
+### Key Technical Components
+
+#### Data Layer
+
+- Retrofit for RESTful FHIR API communication
+- Gson for parsing FHIR JSON responses
+- Repository pattern for modular data access
+
+#### Presentation Layer
+
+- RecyclerView for displaying patient lists and screening data
+- Fragment-based UI navigation
+- LiveData and ViewModel integration for reactive updates
+
+#### Business Logic Layer
+
+- Health data validation utilities
+- Risk scoring algorithms (e.g., for blood pressure categories)
+- Condition evaluation and referral logic
+
+---
+
+## 4. Feature Specifications
+
+### Core Features
+
+#### Patient Registration and Management
+
+- Capture demographic data
+- View and update screening history
+
+#### NCD Screening Form
+
+- Record blood pressure, glucose, weight, and risk factors
+- Auto-calculate BMI and risk score
+
+#### Counseling and Referral
+
+- Provide personalized lifestyle advice
+- Generate referrals using `ServiceRequest`
+
+#### Data Synchronization
+
+- Offline data capture with sync support
+- Secure FHIR-compliant transmission to server
+
+---
+
+## 5. Implementation Plan
+
+### Phase 1: Foundation
+
+- Android project setup and repository configuration
+- FHIR API testing using Retrofit
+- Base UI setup and navigation
+
+### Phase 2: Core Features
+
+- Patient registration and screening workflow
+- Observation and questionnaire integration
+- Referral system and counseling screens
+
+### Phase 3: Refinement
+
+- UI/UX improvements
+- Local database for offline caching
+- Testing, debugging, and documentation
+
+---
+
+## 6. Expected Outcomes
+
+### Technical Deliverables
+
+- Functional Android screening application
+- Integrated FHIR data exchange
+- Entity relationship and architecture documentation
+- Source code under version control
+
+### User Benefits
+
+- Simplified and standardized screening workflow
+- Early detection of hypertension and diabetes
+- Enhanced referral tracking and reporting
+- Improved data quality and health outcomes
+
+---
+
+## 7. Innovation Value
+
+This project illustrates the power of **FHIR standards** in enabling interoperable mobile health solutions for community-level disease screening. By digitizing and structuring NCD data, it promotes early detection, efficient follow-up, and better integration with national health systems.
+
+---
+
+## 8. Compliance & Standards
+
+- **FHIR R4** compliance for structured health data
+- **Android development** best practices
+- **Data privacy** through secure, read-only FHIR transactions
+- **Healthcare interoperability** via standardized resources
+
+---
+
+## 9. System Architecture & Entity Diagrams
+
+### Entity Relationship Diagram (FHIR Entities)
+
+_(Insert diagram here — `entity_diagram.png`)_
+
+### System Architecture Diagram
+
+_(Insert diagram here — `system_architecture.png`)_
+
+---
+
+**Approval Requested:**  
+This proposal outlines the group’s plan to develop a standardized, FHIR-compliant **Non-Communicable Disease (NCD) Screener** mobile application that empowers community health workers to identify, record, and manage NCD risks effectively using Android and interoperable health data standards.
