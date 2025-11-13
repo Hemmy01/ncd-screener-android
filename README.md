@@ -1,93 +1,207 @@
-# final-project-group-af
+# NCD Screener – Non-Communicable Disease Screening App
 
+## Project Proposal
 
+**Project Name:** `final-project-group-af`  
+**Course:** Mobile Programming  
+**Group:** AF  
+**Submission Date:** 9th November 2025
 
-## Getting started
+---
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## Team Composition
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+| Name                             | Student ID | Primary Responsibility                  |
+| -------------------------------- | ---------- | --------------------------------------- |
+| Uwera Masereri Prisca            | 25570      | Patient Screening Data Management       |
+| Hirwa Germain                    | 25571      | Questionnaire and Risk Factor Interface |
+| Ikuzwe Nfuranzima O’neal Dauphin | 24714      | Observation Data Capture (BP, Glucose)  |
+| Familoni Emmanuel Eniola         | 25951      | FHIR API Integration                    |
+| Iradukunda Oscar                 | 26281      | Data Processing & Parsing               |
+| Gahunde Simbi Gloria             | 25435      | Referral & Counseling Module            |
+| Murenzi Munyaburanga Ivan        | 25868      | User Interface Design                   |
+| Mbabazi Yvette                   | 25946      | Application Navigation                  |
+| Ishimwe Alain Pacifique          | 26567      | Quality Assurance                       |
 
-## Add your files
+---
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
+## 1. Project Concept
 
+### Problem Statement
+
+Non-communicable diseases (NCDs) such as hypertension and diabetes are leading causes of morbidity and mortality worldwide. In many communities, early detection is hindered by limited screening tools and poor follow-up systems. Community health workers often lack digital tools to efficiently collect and manage NCD screening data.
+
+### Proposed Solution
+
+The **NCD Screener** is an Android-based mobile application designed to assist community health workers in screening adults for common NCDs such as hypertension and diabetes. The app records vital signs, risk factors, and screening outcomes, and provides basic counseling or referral recommendations based on results.
+
+---
+
+## 2. FHIR Integration Strategy
+
+### Core FHIR Resources Utilization
+
+Our project leverages the **FHIR R4** standard to represent clinical and screening data.
+
+**Primary Resources:**
+
+- **`Patient`** – Basic demographic data of the screened individual
+- **`Observation`** – Captured vital signs such as blood pressure, BMI, and glucose level
+- **`QuestionnaireResponse`** – Answers from screening questionnaires (lifestyle, symptoms, etc.)
+- **`Condition`** – Screening results indicating possible hypertension or diabetes
+- **`ServiceRequest`** – Referrals for further testing or clinical follow-up
+
+### Example FHIR Endpoints
+
+```http
+# Retrieve patient demographic info
+GET /Patient/{patientId}
+
+# Record a new blood pressure observation
+POST /Observation
+
+# Submit questionnaire response
+POST /QuestionnaireResponse
+
+# Record screening outcome (e.g., hypertension detected)
+POST /Condition
+
+# Create referral to health facility
+POST /ServiceRequest
 ```
-cd existing_repo
-git remote add origin https://gitlab.com/final-project-group-af/final-project-group-af.git
-git branch -M main
-git push -uf origin main
-```
 
-## Integrate with your tools
+## FHIR Server Configuration
 
-- [ ] [Set up project integrations](https://gitlab.com/final-project-group-af/final-project-group-af/-/settings/integrations)
+- **Development Server:** HAPI FHIR Public Test Server (`http://hapi.fhir.org/baseR4`)
+- **FHIR Version:** R4
+- **Authentication:** Open access for prototype development
+- **Data Format:** JSON
 
-## Collaborate with your team
+---
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
+## 3. Technical Approach
 
-## Test and Deploy
+### Development Framework
 
-Use the built-in continuous integration in GitLab.
+- **Platform:** Android Native
+- **Programming Language:** Java
+- **IDE:** Android Studio
+- **Architecture Pattern:** MVVM (Model-View-ViewModel)
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+### Key Technical Components
 
-***
+#### Data Layer
 
-# Editing this README
+- Retrofit for RESTful FHIR API communication
+- Gson for parsing FHIR JSON responses
+- Repository pattern for modular data access
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+#### Presentation Layer
 
-## Suggestions for a good README
+- RecyclerView for displaying patient lists and screening data
+- Fragment-based UI navigation
+- LiveData and ViewModel integration for reactive updates
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+#### Business Logic Layer
 
-## Name
-Choose a self-explaining name for your project.
+- Health data validation utilities
+- Risk scoring algorithms (e.g., for blood pressure categories)
+- Condition evaluation and referral logic
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+---
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+## 4. Feature Specifications
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+### Core Features
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+#### Patient Registration and Management
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+- Capture demographic data
+- View and update screening history
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+#### NCD Screening Form
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+- Record blood pressure, glucose, weight, and risk factors
+- Auto-calculate BMI and risk score
 
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
+#### Counseling and Referral
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+- Provide personalized lifestyle advice
+- Generate referrals using `ServiceRequest`
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+#### Data Synchronization
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+- Offline data capture with sync support
+- Secure FHIR-compliant transmission to server
 
-## License
-For open source projects, say how it is licensed.
+---
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+## 5. Implementation Plan
+
+### Phase 1: Foundation
+
+- Android project setup and repository configuration
+- FHIR API testing using Retrofit
+- Base UI setup and navigation
+
+### Phase 2: Core Features
+
+- Patient registration and screening workflow
+- Observation and questionnaire integration
+- Referral system and counseling screens
+
+### Phase 3: Refinement
+
+- UI/UX improvements
+- Local database for offline caching
+- Testing, debugging, and documentation
+
+---
+
+## 6. Expected Outcomes
+
+### Technical Deliverables
+
+- Functional Android screening application
+- Integrated FHIR data exchange
+- Entity relationship and architecture documentation
+- Source code under version control
+
+### User Benefits
+
+- Simplified and standardized screening workflow
+- Early detection of hypertension and diabetes
+- Enhanced referral tracking and reporting
+- Improved data quality and health outcomes
+
+---
+
+## 7. Innovation Value
+
+This project illustrates the power of **FHIR standards** in enabling interoperable mobile health solutions for community-level disease screening. By digitizing and structuring NCD data, it promotes early detection, efficient follow-up, and better integration with national health systems.
+
+---
+
+## 8. Compliance & Standards
+
+- **FHIR R4** compliance for structured health data
+- **Android development** best practices
+- **Data privacy** through secure, read-only FHIR transactions
+- **Healthcare interoperability** via standardized resources
+
+---
+
+## 9. System Architecture & Entity Diagrams
+
+### Entity Relationship Diagram (FHIR Entities)
+
+_(Insert diagram here — `entity_diagram.png`)_
+
+### System Architecture Diagram
+
+_(Insert diagram here — `system_architecture.png`)_
+
+---
+
+**Approval Requested:**  
+This proposal outlines the group’s plan to develop a standardized, FHIR-compliant **Non-Communicable Disease (NCD) Screener** mobile application that empowers community health workers to identify, record, and manage NCD risks effectively using Android and interoperable health data standards.
