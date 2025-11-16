@@ -1,159 +1,207 @@
-# MediTrack - Patient Medication Tracker
+# NCD Screener – Non-Communicable Disease Screening App
 
 ## Project Proposal
+
 **Project Name:** `final-project-group-af`  
 **Course:** Mobile Programming  
 **Group:** AF  
 **Submission Date:** 9th November 2025
 
+---
+
 ## Team Composition
-| Name | Student ID | Primary Responsibility |
-|------|------------|---------------------|
-| Uwera Masereri Prisca | 25570 | Patient Data Management |
-| Hirwa Germain | 25571 | Medication List Interface |
-| Ikuzwe Nfuranzima O neal Dauphin | 24714 | Medication Details Display |
-| Familoni Emmanuel Eniola | 25951 | FHIR API Integration |
-| Iradukunda Oscar | 26281 | Data Processing & Parsing |
-| Gahunde Simbi Gloria | 25435 | Notification System |
-| Murenzi Munyaburanga Ivan | 25868 | User Interface Design |
-| Mbabazi Yvette | 25946 | Application Navigation |
-| Ishimwe Alain Pacifique | 26567 | Quality Assurance |
+
+| Name                             | Student ID | Primary Responsibility                  |
+| -------------------------------- | ---------- | --------------------------------------- |
+| Uwera Masereri Prisca            | 25570      | Patient Screening Data Management       |
+| Hirwa Germain                    | 25571      | Questionnaire and Risk Factor Interface |
+| Ikuzwe Nfuranzima O’neal Dauphin | 24714      | Observation Data Capture (BP, Glucose)  |
+| Familoni Emmanuel Eniola         | 25951      | FHIR API Integration                    |
+| Iradukunda Oscar                 | 26281      | Data Processing & Parsing               |
+| Gahunde Simbi Gloria             | 25435      | Referral & Counseling Module            |
+| Murenzi Munyaburanga Ivan        | 25868      | User Interface Design                   |
+| Mbabazi Yvette                   | 25946      | Application Navigation                  |
+| Ishimwe Alain Pacifique          | 26567      | Quality Assurance                       |
+
+---
 
 ## 1. Project Concept
 
 ### Problem Statement
-Patients often struggle with medication adherence due to complex prescription regimens, lack of clear dosage instructions, and forgetfulness. Current solutions lack seamless integration with standardized healthcare data systems, leading to medication errors and poor health outcomes.
+
+Non-communicable diseases (NCDs) such as hypertension and diabetes are leading causes of morbidity and mortality worldwide. In many communities, early detection is hindered by limited screening tools and poor follow-up systems. Community health workers often lack digital tools to efficiently collect and manage NCD screening data.
 
 ### Proposed Solution
-MediTrack is an Android application that leverages FHIR (Fast Healthcare Interoperability Resources) standards to provide patients with secure, real-time access to their prescribed medications. The app transforms complex medical data into an intuitive interface that promotes medication adherence through clear information display and timely reminders.
+
+The **NCD Screener** is an Android-based mobile application designed to assist community health workers in screening adults for common NCDs such as hypertension and diabetes. The app records vital signs, risk factors, and screening outcomes, and provides basic counseling or referral recommendations based on results.
+
+---
 
 ## 2. FHIR Integration Strategy
 
 ### Core FHIR Resources Utilization
-Our solution will primarily utilize the **`MedicationRequest`** resource as the foundation for medication management, complemented by supporting resources:
+
+Our project leverages the **FHIR R4** standard to represent clinical and screening data.
 
 **Primary Resources:**
-- **`MedicationRequest`**: Core prescription data including:
-  - Medication identification and coding
-  - Dosage instructions (timing, frequency, route, quantity)
-  - Prescription status and validity periods
-  - Patient and prescriber references
 
-**Supporting Resources:**
-- **`Patient`**: Demographic context and identification
-- **`Medication`**: Detailed pharmaceutical information
+- **`Patient`** – Basic demographic data of the screened individual
+- **`Observation`** – Captured vital signs such as blood pressure, BMI, and glucose level
+- **`QuestionnaireResponse`** – Answers from screening questionnaires (lifestyle, symptoms, etc.)
+- **`Condition`** – Screening results indicating possible hypertension or diabetes
+- **`ServiceRequest`** – Referrals for further testing or clinical follow-up
 
-### FHIR API Implementation
-We will implement the following FHIR RESTful API endpoints:
+### Example FHIR Endpoints
 
 ```http
-# Retrieve active patient medications
-GET /MedicationRequest?patient={patientId}&status=active
-
-# Access patient demographic information
+# Retrieve patient demographic info
 GET /Patient/{patientId}
 
-# Fetch detailed medication information
-GET /Medication/{medicationId}
+# Record a new blood pressure observation
+POST /Observation
+
+# Submit questionnaire response
+POST /QuestionnaireResponse
+
+# Record screening outcome (e.g., hypertension detected)
+POST /Condition
+
+# Create referral to health facility
+POST /ServiceRequest
 ```
 
-### FHIR Server Configuration
-- **Development Server**: HAPI FHIR Public Test Server (`http://hapi.fhir.org/baseR4`)
-- **Data Standards**: FHIR R4 specification
-- **Authentication**: Open access for prototype development
+## FHIR Server Configuration
+
+- **Development Server:** HAPI FHIR Public Test Server (`http://hapi.fhir.org/baseR4`)
+- **FHIR Version:** R4
+- **Authentication:** Open access for prototype development
+- **Data Format:** JSON
+
+---
 
 ## 3. Technical Approach
 
 ### Development Framework
-- **Platform**: Android Native
-- **Programming Language**: Java
-- **IDE**: Android Studio
-- **Architecture Pattern**: MVVM (Model-View-ViewModel)
+
+- **Platform:** Android Native
+- **Programming Language:** Java
+- **IDE:** Android Studio
+- **Architecture Pattern:** MVVM (Model-View-ViewModel)
 
 ### Key Technical Components
-1. **Data Layer**
-   - Retrofit for FHIR API communication
-   - Gson for JSON parsing of FHIR resources
-   - Repository pattern for data abstraction
 
-2. **Presentation Layer**
-   - RecyclerView for medication lists
-   - Fragment-based navigation
-   - LiveData for reactive UI updates
+#### Data Layer
 
-3. **Business Logic Layer**
-   - ViewModel for UI data management
-   - WorkManager for notification scheduling
-   - Custom utilities for FHIR data processing
+- Retrofit for RESTful FHIR API communication
+- Gson for parsing FHIR JSON responses
+- Repository pattern for modular data access
+
+#### Presentation Layer
+
+- RecyclerView for displaying patient lists and screening data
+- Fragment-based UI navigation
+- LiveData and ViewModel integration for reactive updates
+
+#### Business Logic Layer
+
+- Health data validation utilities
+- Risk scoring algorithms (e.g., for blood pressure categories)
+- Condition evaluation and referral logic
+
+---
 
 ## 4. Feature Specifications
 
 ### Core Features
-1. **Medication Dashboard**
-   - Display active prescriptions in organized list
-   - Show medication status and next dose timing
-   - Quick access to detailed information
 
-2. **Dosage Management**
-   - Clear presentation of dosage instructions
-   - Administration route and frequency display
-   - Timing and scheduling information
+#### Patient Registration and Management
 
-3. **Reminder System**
-   - Configurable medication intake alerts
-   - Push notification capabilities
-   - Customizable scheduling options
+- Capture demographic data
+- View and update screening history
 
-4. **Patient Information**
-   - Secure display of patient demographics
-   - Medication history overview
-   - Prescriber information access
+#### NCD Screening Form
+
+- Record blood pressure, glucose, weight, and risk factors
+- Auto-calculate BMI and risk score
+
+#### Counseling and Referral
+
+- Provide personalized lifestyle advice
+- Generate referrals using `ServiceRequest`
+
+#### Data Synchronization
+
+- Offline data capture with sync support
+- Secure FHIR-compliant transmission to server
+
+---
 
 ## 5. Implementation Plan
 
-### Phase 1: Foundation 
-- Project setup and repository configuration
-- FHIR API integration and testing
-- Basic UI framework establishment
-- Data models and parsing implementation
+### Phase 1: Foundation
 
-### Phase 2: Core Features 
-- Medication list and detail interfaces
-- Notification system development
-- Navigation and user flow optimization
-- Initial integration testing
+- Android project setup and repository configuration
+- FHIR API testing using Retrofit
+- Base UI setup and navigation
 
-### Phase 3: Refinement 
-- UI/UX polishing and styling
-- Comprehensive testing and bug fixes
-- Performance optimization
-- Documentation completion
+### Phase 2: Core Features
+
+- Patient registration and screening workflow
+- Observation and questionnaire integration
+- Referral system and counseling screens
+
+### Phase 3: Refinement
+
+- UI/UX improvements
+- Local database for offline caching
+- Testing, debugging, and documentation
+
+---
 
 ## 6. Expected Outcomes
 
 ### Technical Deliverables
-- Fully functional Android application
-- Complete FHIR API integration
-- Comprehensive documentation
-- Source code with version control history
+
+- Functional Android screening application
+- Integrated FHIR data exchange
+- Entity relationship and architecture documentation
+- Source code under version control
 
 ### User Benefits
-- Improved medication adherence through reminders
-- Better understanding of prescription regimens
-- Secure access to personal health information
-- Enhanced patient engagement in healthcare
 
-## 7. Innovation Value
-
-This project demonstrates the practical application of FHIR standards in mobile health solutions, showcasing how standardized healthcare APIs can be leveraged to create patient-centric applications that bridge the gap between complex medical data and everyday healthcare management.
-
-## 8. Compliance & Standards
-
-- **FHIR R4** compliance for healthcare data interoperability
-- **Android development** best practices
-- **Data privacy** principles through read-only FHIR access
-- **Healthcare standards** adherence through proper resource utilization
+- Simplified and standardized screening workflow
+- Early detection of hypertension and diabetes
+- Enhanced referral tracking and reporting
+- Improved data quality and health outcomes
 
 ---
 
-**Approval Requested:** This proposal outlines our approach to developing a FHIR-compliant medication tracking application that addresses real-world healthcare challenges through modern mobile technology and standardized data exchange.
+## 7. Innovation Value
+
+This project illustrates the power of **FHIR standards** in enabling interoperable mobile health solutions for community-level disease screening. By digitizing and structuring NCD data, it promotes early detection, efficient follow-up, and better integration with national health systems.
+
+---
+
+## 8. Compliance & Standards
+
+- **FHIR R4** compliance for structured health data
+- **Android development** best practices
+- **Data privacy** through secure, read-only FHIR transactions
+- **Healthcare interoperability** via standardized resources
+
+---
+
+## 9. System Architecture & Entity Diagrams
+
+### Entity Relationship Diagram (FHIR Entities)
+
+_(Insert diagram here — `entity_diagram.png`)_
+
+### System Architecture Diagram
+
+_(Insert diagram here — `system_architecture.png`)_
+
+---
+
+**Approval Requested:**  
+This proposal outlines the group’s plan to develop a standardized, FHIR-compliant **Non-Communicable Disease (NCD) Screener** mobile application that empowers community health workers to identify, record, and manage NCD risks effectively using Android and interoperable health data standards.
