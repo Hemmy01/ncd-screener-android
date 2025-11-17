@@ -124,13 +124,21 @@ External System:
 
 ---
 
-# 5. Use Case Model
+# 5. Models
 
-## 5.1 Use Case Diagram
+### 5.1 Use Case Diagram
 
 ![usecase diagram](assets/Usecase%20diagram.jpg)
 
-This diagram includes:
+### 5.2 Dataflow diagram
+
+![dataflow](assets/Dataflow%20diagram.jpg)
+
+### 5.3 Class diagram
+
+![classdiagram](assets/Class%20diagram.jpg)
+
+These diagrams include:
 
 - Actor: Community Health Worker
 - Actor: FHIR Server
