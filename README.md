@@ -210,4 +210,8 @@ This proposal outlines the group’s plan to develop a standardized, FHIR-compli
 
 ## Prototype or wireframe sketch
 
+<<<<<<< HEAD
 ![prototype](./Docs/assets/Prototype.PNG)
+=======
+![prototype](./Docs/assets/Prototype.PNG)
+>>>>>>> origin/dev
