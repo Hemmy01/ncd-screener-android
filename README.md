@@ -191,17 +191,23 @@ This project illustrates the power of **FHIR standards** in enabling interoperab
 
 ---
 
-## 9. System Architecture & Entity Diagrams
+## 9. System Architecture & Diagrams
 
-### Entity Relationship Diagram (FHIR Entities)
+### 1. Class Diagram (FHIR Entities)
 
-_(Insert diagram here — `entity_diagram.png`)_
+![class diagram](./Docs/assets/Class%20diagram.jpg)
 
-### System Architecture Diagram
+### 2. Data flow diagram
 
-_(Insert diagram here — `system_architecture.png`)_
+![dataflow diagram](./Docs/assets/Dataflow%20diagram.jpg)
 
----
+### 3. Usecase diagram
+
+![usecse diagram](./Docs/assets/Usecase%20diagram.jpg)
 
 **Approval Requested:**  
 This proposal outlines the group’s plan to develop a standardized, FHIR-compliant **Non-Communicable Disease (NCD) Screener** mobile application that empowers community health workers to identify, record, and manage NCD risks effectively using Android and interoperable health data standards.
+
+## Prototype or wireframe sketch
+
+![prototype](./Docs/assets/Prototype.PNG)
