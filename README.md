@@ -203,7 +203,7 @@ This project illustrates the power of **FHIR standards** in enabling interoperab
 
 ### 3. Usecase diagram
 
-![usecse diagram](./Docs/assets/Usecase%20diagram.jpg)
+![usecse diagram](./Docs/assets/Use_Cse%20diagram.jpg)
 
 **Approval Requested:**  
 This proposal outlines the group’s plan to develop a standardized, FHIR-compliant **Non-Communicable Disease (NCD) Screener** mobile application that empowers community health workers to identify, record, and manage NCD risks effectively using Android and interoperable health data standards.
