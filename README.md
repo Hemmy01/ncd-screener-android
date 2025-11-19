@@ -203,7 +203,8 @@ This project illustrates the power of **FHIR standards** in enabling interoperab
 
 ### 3. Usecase diagram
 
-![Use Case Diagram](docs/assets/usecase_diagram.drawio.png)
+![Use Case Diagram](Docs/assets/usecase_diagram.drawio.png)
+
 
 
 **Approval Requested:**  
