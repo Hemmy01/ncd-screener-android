@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.ncd_screener"
+    namespace = "com.example.ncdscreener"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.ncd_screener"
+        applicationId = "com.example.ncdscreener"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
