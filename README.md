@@ -254,11 +254,11 @@ The app implements the following FHIR R4 resources:
 - **Architecture**: MVVM pattern with clear separation
 - **FHIR Resources**: Standard R4 resource structure
 
-System Architecture & Diagrams
+## System Architecture & Diagrams
 
 ### 1. Class Diagram (FHIR Entities)
 
-![class diagram](./Docs/assets/Class%20diagram.jpg)
+![class diagram](./Docs/assets/Classdiagram.jpg)
 
 ### 2. Data flow diagram
 
