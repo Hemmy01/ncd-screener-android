@@ -1,4 +1,4 @@
-package com.example.ncdscreener.api;
+package rw.ac.ncdscreener.api;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -37,4 +37,3 @@ public interface FhirApiService {
     @POST("ServiceRequest")
     Call<Object> createServiceRequest(@Body Object serviceRequestResource);
 }
-

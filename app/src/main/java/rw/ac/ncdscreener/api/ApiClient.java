@@ -1,4 +1,4 @@
-package com.example.ncdscreener.api;
+package rw.ac.ncdscreener.api;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Retrofit API Client for FHIR server communication
  */
 public class ApiClient {
-    private static Retrofit retrofit;
+    private static rw.ac.ncdscreener.api.Retrofit retrofit;
     private static FhirApiService apiService;
 
     public static Retrofit getRetrofitInstance() {
@@ -27,4 +27,3 @@ public class ApiClient {
         return apiService;
     }
 }
-

@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.ncdscreener"
+    namespace = "rw.ac.ncdscreener"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.ncdscreener"
+        applicationId = "rw.ac.ncdscreener"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -37,6 +37,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(libs.work.runtime)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

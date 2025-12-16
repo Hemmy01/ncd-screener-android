@@ -1,4 +1,4 @@
-package com.example.ncd_screener;
+package rw.ac.ncd_screener;
 
 import org.junit.Test;
 
