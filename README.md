@@ -7,6 +7,7 @@ The **NCD Screener** is an Android-based mobile application designed to assist c
 ## 🎯 Key Features
 
 ### Core Functionality
+
 - **Patient Registration and Management**: Capture and manage patient demographic data with full CRUD operations
 - **NCD Screening Form**: Record blood pressure, glucose, weight, height, and risk factors
 - **Auto-Calculations**: Automatic BMI calculation and NCD risk score computation
@@ -15,6 +16,7 @@ The **NCD Screener** is an Android-based mobile application designed to assist c
 - **Data Synchronization**: Offline data capture with automatic sync to FHIR server
 
 ### Technical Features
+
 - **FHIR R4 Compliance**: Full integration with FHIR R4 standard for healthcare interoperability
 - **Offline Support**: Local Room database for offline data capture
 - **Background Sync**: Automatic data synchronization using WorkManager
@@ -24,12 +26,14 @@ The **NCD Screener** is an Android-based mobile application designed to assist c
 ## 🏗️ Architecture
 
 ### MVVM Pattern
+
 - **Model**: Domain models (Patient, Screening, Observation, Condition, etc.)
 - **View**: Fragments and Activities with Material Design UI
 - **ViewModel**: Business logic and data management
 - **Repository**: Data access abstraction (local Room DB + remote FHIR API)
 
 ### Package Structure
+
 ```
 com.example.ncdscreener/
 ├── activities/          # MainActivity, LoginActivity
@@ -47,6 +51,7 @@ com.example.ncdscreener/
 ## 🔧 Technical Stack
 
 ### Core Technologies
+
 - **Language**: Java
 - **Platform**: Android Native
 - **Min SDK**: 24 (Android 7.0)
@@ -54,6 +59,7 @@ com.example.ncdscreener/
 - **Architecture**: MVVM (Model-View-ViewModel)
 
 ### Key Libraries
+
 - **Room**: Local database persistence
 - **Retrofit**: RESTful API communication
 - **Gson**: JSON serialization/deserialization
@@ -63,6 +69,7 @@ com.example.ncdscreener/
 - **Material Components**: UI components
 
 ### FHIR Integration
+
 - **FHIR Version**: R4
 - **Server**: HAPI FHIR Public Test Server (http://hapi.fhir.org/baseR4)
 - **Resources**: Patient, Observation, QuestionnaireResponse, Condition, ServiceRequest
@@ -80,6 +87,7 @@ The app implements the following FHIR R4 resources:
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Android Studio Hedgehog or later
 - JDK 17 or later
 - Android SDK 24+
@@ -88,15 +96,18 @@ The app implements the following FHIR R4 resources:
 ### Installation
 
 1. **Clone the repository**
+
    ```bash
    git clone <repository-url>
    cd NCDScreener
    ```
 
 2. **Open in Android Studio**
+
    - File → Open → Select project directory
 
 3. **Sync Gradle**
+
    - Android Studio will automatically sync dependencies
 
 4. **Run the app**
@@ -104,20 +115,24 @@ The app implements the following FHIR R4 resources:
    - Click Run button or press `Shift+F10`
 
 ### Default Login Credentials
+
 - **Username**: `chw`
 - **Password**: `password`
 
 ## 📖 Usage Guide
 
 ### 1. Login
+
 - Launch the app and login with CHW credentials
 
 ### 2. Register Patient
+
 - Navigate to Patient List
 - Tap the "+" FAB to register a new patient
 - Fill in patient demographic information
 
 ### 3. Conduct Screening
+
 - From Home or Patient Detail, start a new screening
 - Enter vital signs:
   - Blood pressure (systolic/diastolic)
@@ -127,15 +142,18 @@ The app implements the following FHIR R4 resources:
 - Submit screening
 
 ### 4. View Results
+
 - Review risk score and detected conditions
 - Generate referral if needed
 - Access counseling information
 
 ### 5. View Screening History
+
 - Open patient details
 - Scroll to see all past screenings
 
 ### 6. Edit Patient
+
 - From Patient Detail, tap "Edit Patient"
 - Update patient information
 - Save changes
@@ -143,6 +161,7 @@ The app implements the following FHIR R4 resources:
 ## 🗄️ Database Schema
 
 ### Entities
+
 - **CHWEntity**: Community Health Worker information
 - **PatientEntity**: Patient demographic data
 - **ScreeningEntity**: Screening session information
@@ -152,6 +171,7 @@ The app implements the following FHIR R4 resources:
 - **ServiceRequestEntity**: Referral requests
 
 ### Relationships
+
 - Screening → Patient (Foreign Key)
 - Observation → Screening (Foreign Key)
 - Condition → Screening (Foreign Key)
@@ -161,11 +181,13 @@ The app implements the following FHIR R4 resources:
 ## 🔄 Data Synchronization
 
 ### Sync Strategy
+
 1. **Immediate Sync**: `FhirSyncService` for on-demand sync
 2. **Periodic Sync**: `FhirSyncWorker` with WorkManager (runs every 24 hours)
 3. **Offline Support**: All data stored locally in Room database
 
 ### Sync Process
+
 1. Convert local entities to FHIR resources
 2. Send to FHIR server via Retrofit
 3. Handle success/failure responses
@@ -174,12 +196,14 @@ The app implements the following FHIR R4 resources:
 ## 🎨 UI/UX Features
 
 ### Material Design 3
+
 - **Color Palette**: Healthcare-appropriate color scheme
 - **Components**: Material buttons, cards, text fields
 - **Navigation**: Bottom navigation and FAB
 - **Accessibility**: Proper content descriptions and labels
 
 ### Key Screens
+
 - **Home**: Quick actions and app overview
 - **Patient List**: Browse all registered patients
 - **Patient Detail**: View patient info and screening history
@@ -190,6 +214,7 @@ The app implements the following FHIR R4 resources:
 ## 🧪 Testing
 
 ### Manual Testing Checklist
+
 - [ ] Patient registration
 - [ ] Patient editing
 - [ ] Screening form submission
@@ -204,6 +229,7 @@ The app implements the following FHIR R4 resources:
 **Overall Coverage: 100%** ✅
 
 ### Implemented Features
+
 - ✅ All 5 FHIR resources
 - ✅ Patient registration and management
 - ✅ Screening form with auto-calculations
@@ -228,9 +254,31 @@ The app implements the following FHIR R4 resources:
 - **Architecture**: MVVM pattern with clear separation
 - **FHIR Resources**: Standard R4 resource structure
 
+System Architecture & Diagrams
+
+### 1. Class Diagram (FHIR Entities)
+
+![class diagram](./Docs/assets/Class%20diagram.jpg)
+
+### 2. Data flow diagram
+
+![dataflow diagram](./Docs/assets/Dataflow%20diagram.jpg)
+
+### 3. Usecase diagram
+
+![usecse diagram](./Docs/assets/Usecase%20diagram.jpg)
+
+**Approval Requested:**  
+This proposal outlines the group’s plan to develop a standardized, FHIR-compliant **Non-Communicable Disease (NCD) Screener** mobile application that empowers community health workers to identify, record, and manage NCD risks effectively using Android and interoperable health data standards.
+
+## Prototype or wireframe sketch
+
+![prototype](./Docs/assets/Prototype.PNG)
+
 ## 🤝 Contributing
 
 This is an academic project. For improvements:
+
 1. Follow Android best practices
 2. Maintain MVVM architecture
 3. Add JavaDoc comments
@@ -258,4 +306,3 @@ This project is developed for educational purposes as part of a mobile programmi
 **Version**: 1.0.0  
 **Last Updated**: 2024  
 **Status**: Production Ready ✅
-
