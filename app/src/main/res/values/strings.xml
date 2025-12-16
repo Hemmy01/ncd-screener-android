@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">NCD Screener</string>
+
+    <!-- General -->
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="cancel">Cancel</string>
+    <string name="apply">Apply</string>
+    <string name="settings_placeholder">This is a placeholder for Settings. You can add preferences like language and theme here.</string>
+
+    <!-- Theme Settings -->
+    <string name="theme_setting">Theme</string>
+    <string name="theme_light">Light Mode</string>
+    <string name="theme_dark">Dark Mode</string>
+
+    <!-- Language Settings -->
+    <string name="language_setting">Language</string>
+    <string name="language_english">English</string>
+    <string name="language_french">Français</string>
+    <string name="language_kinyarwanda">Kinyarwanda</string>
+
+    <!-- Greeting / Home -->
+    <string name="community_health_worker">Community Health Worker</string>
+    <string name="good_morning">Good morning!</string>
+    <string name="good_afternoon">Good afternoon!</string>
+    <string name="good_evening">Good evening!</string>
+    <string name="welcome_back">Welcome back!</string>
+    <string name="home_subtitle_app">Let us continue making a difference in community health</string>
+    <string name="overview">Overview</string>
+    <string name="total_patients">Total Patients</string>
+    <string name="total_screenings">Total Screenings</string>
+    <string name="today_screenings">Today Screenings</string>
+    <string name="no_recent_activity">No recent activity</string>
+    <string name="select_patient_prompt">Please select a patient to screen</string>
+
+    <!-- Home labels/texts -->
+    <string name="patients_label">Patients</string>
+    <string name="screenings_label">Screenings</string>
+    <string name="quick_actions">Quick Actions</string>
+    <string name="start_new_ncd_session">Start a new NCD screening session</string>
+    <string name="view_patients">View Patients</string>
+    <string name="browse_manage_patients">Browse and manage registered patients</string>
+    <string name="recent_activity">Recent Activity</string>
+
+    <!-- Dialogs -->
+    <string name="choose_action">Choose an action</string>
+    <string name="add_new_patient">Add New Patient</string>
+    <string name="new_screening">New Screening</string>
+
+    <!-- Auth -->
+    <string name="create_account">Create account</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="reset_password">Reset password</string>
+    <string name="username">Username</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="phone_number">Phone number</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="new_password">New password</string>
+</resources>
