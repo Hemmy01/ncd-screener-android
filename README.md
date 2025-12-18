@@ -262,11 +262,11 @@ The app implements the following FHIR R4 resources:
 
 ### 2. Data flow diagram
 
-![dataflow diagram](./Docs/assets/Dataflow%20diagram.jpg)
+![dataflow diagram](./Docs/assets/DFD_1.jpg)
 
 ### 3. Usecase diagram
 
-![usecse diagram](./Docs/assets/Usecase%20diagram.jpg)
+![usecse diagram](./Docs/assets/usecase_diagram.drawio.png)
 
 **Approval Requested:**  
 This proposal outlines the group’s plan to develop a standardized, FHIR-compliant **Non-Communicable Disease (NCD) Screener** mobile application that empowers community health workers to identify, record, and manage NCD risks effectively using Android and interoperable health data standards.
