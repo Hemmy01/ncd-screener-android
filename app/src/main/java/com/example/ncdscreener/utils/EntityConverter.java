@@ -62,12 +62,17 @@ public class EntityConverter {
     }
     
     public static Patient fromEntity(PatientEntity entity) {
+        if (entity == null) {
+            return null;
+        }
         Patient patient = new Patient();
         patient.setPatientId(entity.getPatientId());
         patient.setNationalId(entity.getNationalId());
         patient.setFirstName(entity.getFirstName());
         patient.setLastName(entity.getLastName());
-        patient.setDateOfBirth(new Date(entity.getDateOfBirth()));
+        // Handle dateOfBirth: if 0 or negative, set to null instead of Date(0)
+        long dateOfBirthTimestamp = entity.getDateOfBirth();
+        patient.setDateOfBirth(dateOfBirthTimestamp > 0 ? new Date(dateOfBirthTimestamp) : null);
         patient.setGender(entity.getGender());
         patient.setPhoneNumber(entity.getPhoneNumber());
         patient.setAddress(entity.getAddress());

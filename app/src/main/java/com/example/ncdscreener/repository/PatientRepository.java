@@ -34,6 +34,7 @@ public class PatientRepository {
 
     // Local operations using Room
     public LiveData<List<PatientEntity>> getAllPatients() {
+        android.util.Log.d("PatientRepository", "getAllPatients() called, returning LiveData");
         return patientDao.getAllPatients();
     }
 
@@ -43,12 +44,20 @@ public class PatientRepository {
 
     public void savePatientLocally(Patient patient) {
         executorService.execute(() -> {
-            PatientEntity entity = EntityConverter.toEntity(patient);
-            long id = patientDao.insertPatient(entity);
-            if (id > 0 && patient.getPatientId() == 0) {
-                patient.setPatientId((int) id);
+            try {
+                android.util.Log.d("PatientRepository", "savePatientLocally: Starting save for patient: " + patient.getFirstName() + " " + patient.getLastName());
+                PatientEntity entity = EntityConverter.toEntity(patient);
+                long id = patientDao.insertPatient(entity);
+                android.util.Log.d("PatientRepository", "savePatientLocally: Insert returned ID: " + id);
+                if (id > 0 && patient.getPatientId() == 0) {
+                    patient.setPatientId((int) id);
+                }
+                // Verify the patient was actually saved
+                int count = patientDao.getPatientCount();
+                android.util.Log.d("PatientRepository", "Patient saved with ID: " + id + ", Total patients in DB: " + count);
+            } catch (Exception e) {
+                android.util.Log.e("PatientRepository", "Error saving patient", e);
             }
-            android.util.Log.d("PatientRepository", "Patient saved with ID: " + id);
         });
     }
     

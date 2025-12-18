@@ -7,6 +7,145 @@
     android:background="@color/background"
     tools:context=".fragments.PatientListFragment">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Search and Filter Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_search_filter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardElevation="2dp"
+            app:cardCornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <!-- Search Bar -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Search patients..."
+                    app:startIconDrawable="@android:drawable/ic_menu_search"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edit_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:imeOptions="actionSearch" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Filter Options -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical">
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chip_group_filters"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:singleSelection="true"
+                        app:checkedChip="@id/chip_filter_all">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_filter_all"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="All"
+                            android:checked="true" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_filter_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ID" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_filter_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Name" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chip_filter_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Phone" />
+                    </com.google.android.material.chip.ChipGroup>
+
+                    <!-- Export Button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/button_export"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Export"
+                        android:textSize="12sp"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- RecyclerView positioned below search card -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_patients"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="8dp"
+            android:clipToPadding="false"
+            app:layout_constraintTop_toBottomOf="@id/card_search_filter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:listitem="@layout/item_patient" />
+
+        <!-- Empty State TextView -->
+        <TextView
+            android:id="@+id/text_empty_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No patients registered yet.&#10;Tap + to add a new patient."
+            android:textAlignment="center"
+            android:textColor="@color/on_surface"
+            android:textSize="16sp"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@id/recycler_view_patients"
+            app:layout_constraintBottom_toBottomOf="@id/recycler_view_patients"
+            app:layout_constraintStart_toStartOf="@id/recycler_view_patients"
+            app:layout_constraintEnd_toEndOf="@id/recycler_view_patients" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Scroll to Top Button -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_scroll_to_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="80dp"
+        android:contentDescription="Scroll to top"
+        android:visibility="gone"
+        app:srcCompat="@android:drawable/arrow_up_float"
+        app:tint="@color/on_primary"
+        app:fabSize="mini" />
+
+    <!-- Add Patient Button -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_add_patient"
         android:layout_width="wrap_content"
@@ -16,24 +155,6 @@
         android:contentDescription="Add Patient"
         app:srcCompat="@android:drawable/ic_input_add"
         app:tint="@color/on_primary" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view_patients"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="8dp"
-        tools:listitem="@layout/item_patient" />
-
-    <TextView
-        android:id="@+id/text_empty_state"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="No patients registered yet.&#10;Tap + to add a new patient."
-        android:textAlignment="center"
-        android:textColor="@color/on_surface"
-        android:textSize="16sp"
-        android:visibility="gone" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
