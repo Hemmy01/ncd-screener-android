@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NCD Screener</string>
+
+    <!-- General -->
+    <string name="profile">Profil</string>
+    <string name="settings">Parametres</string>
+    <string name="cancel">Annuler</string>
+    <string name="apply">Appliquer</string>
+    <string name="settings_placeholder">Parametres pour la langue et le theme.</string>
+
+    <!-- Theme Settings -->
+    <string name="theme_setting">Theme</string>
+    <string name="theme_light">Mode clair</string>
+    <string name="theme_dark">Mode sombre</string>
+
+    <!-- Language Settings -->
+    <string name="language_setting">Langue</string>
+    <string name="language_english">English</string>
+    <string name="language_french">Francais</string>
+    <string name="language_kinyarwanda">Kinyarwanda</string>
+
+    <!-- Greeting / Home -->
+    <string name="community_health_worker">Travailleur de sante communautaire</string>
+    <string name="good_morning">Bonjour!</string>
+    <string name="good_afternoon">Bon apres-midi!</string>
+    <string name="good_evening">Bonsoir!</string>
+    <string name="welcome_back">Bienvenue!</string>
+    <string name="home_subtitle_app">Continuons a faire une difference dans la sante communautaire</string>
+    <string name="overview">Apercu</string>
+    <string name="total_patients">Patients totaux</string>
+    <string name="total_screenings">Depistages totaux</string>
+    <string name="today_screenings">Depistages d aujourd hui</string>
+    <string name="no_recent_activity">Aucune activite recente</string>
+    <string name="select_patient_prompt">Veuillez selectionner un patient a depister</string>
+
+    <!-- Home labels/texts -->
+    <string name="patients_label">Patients</string>
+    <string name="screenings_label">Depistages</string>
+    <string name="quick_actions">Actions rapides</string>
+    <string name="start_new_ncd_session">Demarrer une nouvelle session de depistage MNT</string>
+    <string name="view_patients">Voir les patients</string>
+    <string name="browse_manage_patients">Parcourir et gerer les patients enregistres</string>
+    <string name="recent_activity">Activite recente</string>
+
+    <!-- Dialogs -->
+    <string name="choose_action">Choisir une action</string>
+    <string name="add_new_patient">Ajouter un nouveau patient</string>
+    <string name="new_screening">Nouveau depistage</string>
+
+    <!-- Auth -->
+    <string name="create_account">Creer un compte</string>
+    <string name="forgot_password">Mot de passe oublie?</string>
+    <string name="reset_password">Reinitialiser le mot de passe</string>
+    <string name="username">Nom d utilisateur</string>
+    <string name="first_name">Prenom</string>
+    <string name="last_name">Nom de famille</string>
+    <string name="phone_number">Numero de telephone</string>
+    <string name="password">Mot de passe</string>
+    <string name="confirm_password">Confirmer le mot de passe</string>
+    <string name="new_password">Nouveau mot de passe</string>
+</resources>

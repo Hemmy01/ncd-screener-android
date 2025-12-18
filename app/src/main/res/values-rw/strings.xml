@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NCD Screener</string>
+
+    <!-- General -->
+    <string name="profile">Umwirondoro</string>
+    <string name="settings">Igenamiterere</string>
+    <string name="cancel">Guhagarika</string>
+    <string name="apply">Gushyiraho</string>
+    <string name="settings_placeholder">Igenamiterere kumwe n ururimi n ikirangiro.</string>
+
+    <!-- Theme Settings -->
+    <string name="theme_setting">Ikirangiro</string>
+    <string name="theme_light">Imiterere Mpinduramakunyuze</string>
+    <string name="theme_dark">Imiterere Gusukuye</string>
+
+    <!-- Language Settings -->
+    <string name="language_setting">Ururimi</string>
+    <string name="language_english">English</string>
+    <string name="language_french">Francais</string>
+    <string name="language_kinyarwanda">Kinyarwanda</string>
+
+    <!-- Greeting / Home -->
+    <string name="community_health_worker">Umukozi w Ubwubatsi bw Umuryango</string>
+    <string name="good_morning">Muraho!</string>
+    <string name="good_afternoon">Mwaramutse nyuma y iyamungu!</string>
+    <string name="good_evening">Mwaramutse!</string>
+    <string name="welcome_back">Mwakareshwa!</string>
+    <string name="home_subtitle_app">Reka turagezeho gukurura ubwubatsi bw umuryango</string>
+    <string name="overview">Intego</string>
+    <string name="total_patients">Abagabye mu rwego rusange</string>
+    <string name="total_screenings">Iyobeye mu rwego rusange</string>
+    <string name="today_screenings">Iyobeye mu gihe cya none</string>
+    <string name="no_recent_activity">Nta gitsinga kimwe gishyire</string>
+    <string name="select_patient_prompt">Nyamuneka hitamo umubayi utegurirwa kuyobewe</string>
+
+    <!-- Home labels/texts -->
+    <string name="patients_label">Abagabye</string>
+    <string name="screenings_label">Iyobeye</string>
+    <string name="quick_actions">Ibikorwa byihuse</string>
+    <string name="start_new_ncd_session">Tangira seanse nshya y iyobewe ry indwara zidahanganye</string>
+    <string name="view_patients">Reba abagabye</string>
+    <string name="browse_manage_patients">Reba kandi kuvugururiza abagabye badosozi</string>
+    <string name="recent_activity">Igihe mbere cy ibikorwa</string>
+
+    <!-- Dialogs -->
+    <string name="choose_action">Hitamo ikintu cyo kubikorako</string>
+    <string name="add_new_patient">Ongereza umubayi mushya</string>
+    <string name="new_screening">Iyobewe nshya</string>
+
+    <!-- Auth -->
+    <string name="create_account">Kurema konti</string>
+    <string name="forgot_password">Wabye ijambo ryibanga?</string>
+    <string name="reset_password">Ongera kuiteka ijambo ryibanga</string>
+    <string name="username">Izina rya muyoboze</string>
+    <string name="first_name">Izina ry iyambere</string>
+    <string name="last_name">Izina rya mbere</string>
+    <string name="phone_number">Nomero y icyuma</string>
+    <string name="password">Ijambo ryibanga</string>
+    <string name="confirm_password">Emeza ijambo ryibanga</string>
+    <string name="new_password">Ijambo rya bibanga rishya</string>
+</resources>
