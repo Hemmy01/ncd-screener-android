@@ -44,21 +44,28 @@ public class PatientAdapter extends RecyclerView.Adapter<PatientAdapter.PatientV
 
     @Override
     public void onBindViewHolder(@NonNull PatientViewHolder holder, int position) {
+        android.util.Log.d("PatientAdapter", "onBindViewHolder called for position: " + position + ", patients size: " + (patients != null ? patients.size() : 0));
         if (patients != null && position < patients.size()) {
             Patient patient = patients.get(position);
+            android.util.Log.d("PatientAdapter", "Binding patient: " + (patient != null ? patient.getFullName() : "null"));
             holder.bind(patient);
         } else {
+            android.util.Log.w("PatientAdapter", "Invalid position or null patients");
             holder.bind(null);
         }
     }
 
     @Override
     public int getItemCount() {
-        return patients != null ? patients.size() : 0;
+        int count = patients != null ? patients.size() : 0;
+        android.util.Log.d("PatientAdapter", "getItemCount called, returning: " + count);
+        return count;
     }
 
     public void updatePatients(List<Patient> newPatients) {
+        android.util.Log.d("PatientAdapter", "updatePatients called with " + (newPatients != null ? newPatients.size() : 0) + " patients");
         this.patients = newPatients;
+        android.util.Log.d("PatientAdapter", "notifyDataSetChanged called, getItemCount: " + getItemCount());
         notifyDataSetChanged();
     }
 

@@ -34,14 +34,27 @@ public class PatientViewModel extends AndroidViewModel {
         patientsEntityLiveData = repository.getAllPatients();
         selectedPatientLiveData = new MutableLiveData<>();
         executorService = Executors.newSingleThreadExecutor();
+        android.util.Log.d("PatientViewModel", "ViewModel created, LiveData initialized");
     }
 
     public LiveData<List<Patient>> getPatients() {
         return Transformations.map(patientsEntityLiveData, entities -> {
-            if (entities == null) return new ArrayList<>();
-            return entities.stream()
-                .map(EntityConverter::fromEntity)
-                .collect(Collectors.toList());
+            if (entities == null) {
+                android.util.Log.d("PatientViewModel", "getPatients: entities is null");
+                return new ArrayList<>();
+            }
+            android.util.Log.d("PatientViewModel", "getPatients: converting " + entities.size() + " entities");
+            try {
+                List<Patient> patients = entities.stream()
+                    .map(EntityConverter::fromEntity)
+                    .filter(patient -> patient != null) // Filter out any null conversions
+                    .collect(Collectors.toList());
+                android.util.Log.d("PatientViewModel", "getPatients: converted to " + patients.size() + " patients");
+                return patients;
+            } catch (Exception e) {
+                android.util.Log.e("PatientViewModel", "Error converting entities to patients", e);
+                return new ArrayList<>();
+            }
         });
     }
 
