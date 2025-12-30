@@ -107,19 +107,25 @@ public class HomeFragment extends Fragment {
             settingsBtn.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.action_home_to_settings));
         }
 
+        // New Screening card - goes to screening list
         cardNewScreening.setOnClickListener(v -> {
-            Navigation.findNavController(v).navigate(R.id.action_home_to_patient_list);
-            android.widget.Toast.makeText(getContext(), getString(R.string.select_patient_prompt), android.widget.Toast.LENGTH_SHORT).show();
+            Navigation.findNavController(v).navigate(R.id.action_home_to_screening_list);
         });
 
+        // Patient List card - goes to patient list
         cardPatientList.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.action_home_to_patient_list));
         
-        // Statistics cards also navigate to patient list
+        // Statistics cards navigation - patients go to patient list, screenings go to screening list
         cardTotalPatients.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.action_home_to_patient_list));
         
-        cardTotalScreenings.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.action_home_to_patient_list));
+        cardTotalScreenings.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.action_home_to_screening_list));
         
-        cardTodayScreenings.setOnClickListener(v -> Navigation.findNavController(v).navigate(R.id.action_home_to_patient_list));
+        // Today's Screenings - navigate with filter parameter to show only today's screenings
+        cardTodayScreenings.setOnClickListener(v -> {
+            Bundle args = new Bundle();
+            args.putBoolean("filter_today_only", true);
+            Navigation.findNavController(v).navigate(R.id.action_home_to_screening_list, args);
+        });
     }
 
     private void displayWelcomeMessage() {
@@ -245,6 +251,13 @@ public class HomeFragment extends Fragment {
             description += " • " + screening.getLocation();
         }
         textDescription.setText(description);
+        
+        // Add click listener to navigate to screening detail
+        itemView.setOnClickListener(v -> {
+            Bundle args = new Bundle();
+            args.putInt("screening_id", screening.getScreeningId());
+            Navigation.findNavController(v).navigate(R.id.screeningDetailFragment, args);
+        });
         
         return itemView;
     }

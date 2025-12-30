@@ -186,25 +186,17 @@ public class MainActivity extends AppCompatActivity {
         builder.setItems(options, (dialog, which) -> {
             if (navController != null) {
                 if (which == 0) {
-                    // Add New Patient - navigate to patient list, then to register patient
+                    // Add New Patient - navigate directly to register patient
                     androidx.lifecycle.ViewModelProvider provider = new androidx.lifecycle.ViewModelProvider(this);
                     com.example.ncdscreener.viewmodel.PatientViewModel patientViewModel = provider.get(com.example.ncdscreener.viewmodel.PatientViewModel.class);
-                    patientViewModel.selectPatient(0); // Clear selection
-                    navController.navigate(R.id.patientListFragment);
-                    // Navigate to register patient after navigation completes
-                    findViewById(R.id.nav_host_fragment).postDelayed(() -> {
-                        if (navController != null && navController.getCurrentDestination() != null) {
-                            try {
-                                navController.navigate(R.id.registerPatientFragment);
-                            } catch (Exception e) {
-                                android.util.Log.e("MainActivity", "Navigation error", e);
-                            }
-                        }
-                    }, 500);
+                    patientViewModel.selectPatient(0); // Clear selection for new patient
+                    navController.navigate(R.id.registerPatientFragment);
                 } else if (which == 1) {
-                    // New Screening - navigate to patient list to select patient first
-                    navController.navigate(R.id.patientListFragment);
-                    android.widget.Toast.makeText(this, getString(R.string.select_patient_prompt), android.widget.Toast.LENGTH_SHORT).show();
+                    // New Screening - navigate to screening form (user will select patient there or from patient list)
+                    androidx.lifecycle.ViewModelProvider provider = new androidx.lifecycle.ViewModelProvider(this);
+                    com.example.ncdscreener.viewmodel.PatientViewModel patientViewModel = provider.get(com.example.ncdscreener.viewmodel.PatientViewModel.class);
+                    patientViewModel.selectPatient(0); // Clear selection so user can choose
+                    navController.navigate(R.id.screeningFormFragment);
                 }
             }
         });

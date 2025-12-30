@@ -18,7 +18,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.ncdscreener.R;
 import com.example.ncdscreener.adapters.ScreeningHistoryAdapter;
 import com.example.ncdscreener.database.entity.ScreeningEntity;
-import com.example.ncdscreener.utils.ToastHelper;
 import com.example.ncdscreener.viewmodel.ScreeningViewModel;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -37,6 +36,7 @@ public class ScreeningListFragment extends Fragment {
     private ScreeningHistoryAdapter adapter;
     private ScreeningViewModel viewModel;
     private List<ScreeningEntity> allScreenings = new ArrayList<>();
+    private boolean filterTodayOnly = false;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -48,6 +48,11 @@ public class ScreeningListFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        // Get filter argument if passed
+        if (getArguments() != null) {
+            filterTodayOnly = getArguments().getBoolean("filter_today_only", false);
+        }
+
         // Initialize views
         recyclerViewScreenings = view.findViewById(R.id.recycler_view_screenings);
         textEmptyState = view.findViewById(R.id.text_empty_state);
@@ -58,7 +63,9 @@ public class ScreeningListFragment extends Fragment {
         viewModel = new ViewModelProvider(requireActivity()).get(ScreeningViewModel.class);
         viewModel.getScreenings().observe(getViewLifecycleOwner(), screenings -> {
             allScreenings = screenings != null ? screenings : new ArrayList<>();
-            updateScreeningList(allScreenings);
+            // Filter screenings if today only filter is enabled
+            List<ScreeningEntity> filteredScreenings = filterTodayOnly ? filterTodayScreenings(allScreenings) : allScreenings;
+            updateScreeningList(filteredScreenings);
         });
 
         // Setup RecyclerView
@@ -78,12 +85,9 @@ public class ScreeningListFragment extends Fragment {
         // Setup scroll to top button
         setupScrollToTopButton();
 
-        // Setup FAB - navigate directly to screening form (patient selection is in the form)
+        // Setup FAB - navigate to screening form (user will select patient in form or from patient list)
         fabNewScreening.setOnClickListener(v -> {
-            // Clear any pre-selected patient so user can choose in the form
-            com.example.ncdscreener.viewmodel.PatientViewModel patientViewModel = 
-                new androidx.lifecycle.ViewModelProvider(requireActivity()).get(com.example.ncdscreener.viewmodel.PatientViewModel.class);
-            patientViewModel.selectPatient(0);
+            // Navigate to screening form - user can select patient from there or navigate to patient list
             Navigation.findNavController(v).navigate(R.id.action_screening_list_to_new_screening);
         });
     }
@@ -125,12 +129,44 @@ public class ScreeningListFragment extends Fragment {
     }
 
     /**
+     * Filter screenings to show only today's screenings
+     */
+    private List<ScreeningEntity> filterTodayScreenings(List<ScreeningEntity> screenings) {
+        List<ScreeningEntity> todayScreenings = new ArrayList<>();
+        long todayStart = getTodayStartTimestamp();
+        long todayEnd = todayStart + (24 * 60 * 60 * 1000) - 1; // End of today
+        
+        for (ScreeningEntity screening : screenings) {
+            long screeningDate = screening.getScreeningDate();
+            if (screeningDate >= todayStart && screeningDate <= todayEnd) {
+                todayScreenings.add(screening);
+            }
+        }
+        return todayScreenings;
+    }
+    
+    /**
+     * Get today's start timestamp (00:00:00)
+     */
+    private long getTodayStartTimestamp() {
+        java.util.Calendar cal = java.util.Calendar.getInstance();
+        cal.set(java.util.Calendar.HOUR_OF_DAY, 0);
+        cal.set(java.util.Calendar.MINUTE, 0);
+        cal.set(java.util.Calendar.SECOND, 0);
+        cal.set(java.util.Calendar.MILLISECOND, 0);
+        return cal.getTimeInMillis();
+    }
+
+    /**
      * Update the screening list display
      */
     private void updateScreeningList(List<ScreeningEntity> screenings) {
         if (screenings == null || screenings.isEmpty()) {
             recyclerViewScreenings.setVisibility(View.GONE);
             textEmptyState.setVisibility(View.VISIBLE);
+            if (filterTodayOnly) {
+                textEmptyState.setText("No screenings found for today.");
+            }
         } else {
             textEmptyState.setVisibility(View.GONE);
             recyclerViewScreenings.setVisibility(View.VISIBLE);
@@ -147,7 +183,7 @@ public class ScreeningListFragment extends Fragment {
             .setMessage("Are you sure you want to delete this screening? This will also delete all associated observations, conditions, and questionnaires. This action cannot be undone.")
             .setPositiveButton("Delete", (dialog, which) -> {
                 viewModel.deleteScreening(screeningId);
-                ToastHelper.showSuccess(getContext(), "Screening and all associated data have been deleted successfully");
+                Toast.makeText(getContext(), "Screening deleted successfully", Toast.LENGTH_SHORT).show();
                 // The list will automatically update via LiveData observer
             })
             .setNegativeButton("Cancel", null)

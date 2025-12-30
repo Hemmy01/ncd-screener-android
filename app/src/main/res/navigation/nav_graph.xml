@@ -32,6 +32,13 @@
             app:destination="@id/settingsFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_home_to_screening_list"
+            app:destination="@id/screeningListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
     </fragment>
 
     <fragment
@@ -145,6 +152,34 @@
             android:name="screening_id"
             app:argType="integer"
             android:defaultValue="-1" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/screeningListFragment"
+        android:name="com.example.ncdscreener.fragments.ScreeningListFragment"
+        android:label="Screenings"
+        tools:layout="@layout/fragment_screening_list">
+        <argument
+            android:name="filter_today_only"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_screening_list_to_screening_detail"
+            app:destination="@id/screeningDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_screening_list_to_patient_list"
+            app:destination="@id/patientListFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_screening_list_to_new_screening"
+            app:destination="@id/screeningFormFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/fade_out" />
     </fragment>
 
 </navigation>
