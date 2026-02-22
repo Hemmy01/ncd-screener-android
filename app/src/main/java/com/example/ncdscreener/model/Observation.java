@@ -6,6 +6,7 @@ package com.example.ncdscreener.model;
  */
 public class Observation {
     private int observationId;
+    private String fhirId; // FHIR server ID
     private String observationType; // e.g., "blood_pressure", "glucose", "bmi", "weight"
     private double value;
     private String unit; // e.g., "mmHg", "mg/dL", "kg/m²"
@@ -29,6 +30,14 @@ public class Observation {
 
     public void setObservationId(int observationId) {
         this.observationId = observationId;
+    }
+
+    public String getFhirId() {
+        return fhirId;
+    }
+
+    public void setFhirId(String fhirId) {
+        this.fhirId = fhirId;
     }
 
     public String getObservationType() {

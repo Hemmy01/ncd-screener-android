@@ -1,0 +1,1400 @@
+Initialized native services in: C:\Users\PC\.gradle\native
+Initialized jansi services in: C:\Users\PC\.gradle\native
+Found daemon DaemonInfo{pid=20464, address=[a2fc0d6e-1b29-497a-9af0-53588918dbd8 port:59687, addresses:[/127.0.0.1]], state=Idle, lastBusy=1770666396494, context=DefaultDaemonContext[uid=da01050c-abc9-4c05-80a0-ee404f7c86db,javaHome=C:\Users\PC\.vscode\extensions\redhat.java-1.52.0-win32-x64\jre\21.0.9-win32-x86_64,javaVersion=21,javaVendor=Eclipse Adoptium,daemonRegistryDir=C:\Users\PC\.gradle\daemon,pid=20464,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-Xmx2048m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]} however its context does not match the desired criteria.
+JVM is incompatible.
+Wanted: DaemonRequestContext{jvmCriteria=C:\Program Files\Java\jdk-25 (no JDK specified, using current Java home), daemonOpts=[-Xmx2048m, -Dfile.encoding=UTF-8, -Duser.country=US, -Duser.language=en, -Duser.variant], applyInstrumentationAgent=true, nativeServicesMode=ENABLED, priority=NORMAL}
+Actual: DefaultDaemonContext[uid=da01050c-abc9-4c05-80a0-ee404f7c86db,javaHome=C:\Users\PC\.vscode\extensions\redhat.java-1.52.0-win32-x64\jre\21.0.9-win32-x86_64,javaVersion=21,javaVendor=Eclipse Adoptium,daemonRegistryDir=C:\Users\PC\.gradle\daemon,pid=20464,idleTimeout=10800000,priority=NORMAL,applyInstrumentationAgent=true,nativeServicesMode=ENABLED,daemonOpts=-Xmx2048m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]
+
+  Looking for a different daemon...
+The client will now receive all logging from the daemon (pid: 22668). The daemon log file: C:\Users\PC\.gradle\daemon\8.13\daemon-22668.out.log
+Starting 4th build in daemon [uptime: 21 mins 27.966 secs, performance: 99%, GC rate: 0.00/s, heap usage: 0% of 2 GiB]
+Using 4 worker leases.
+Now considering [C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1] as hierarchies to watch
+Watching the file system is configured to be enabled if available
+File system watching is active
+Starting Build
+Settings evaluated using settings file 'C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\settings.gradle'.
+Projects loaded. Root project using build file 'C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\build.gradle'.
+Included projects: [root project 'NCDScreener', project ':app']
+
+> Configure project :
+Evaluating root project 'NCDScreener' using build file 'C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\build.gradle'.
+Resolved plugin [id: 'com.android.application', version: '8.13.1', apply: false]
+Resolved plugin [id: 'org.jetbrains.kotlin.android', version: '1.9.24', apply: false]
+
+> Configure project :app
+Evaluating project ':app' using build file 'C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build.gradle'.
+Resolved plugin [id: 'com.android.application', version: '8.13.1']
+Resolved plugin [id: 'org.jetbrains.kotlin.android', version: '1.9.24']
+Using default execution profile
+Using Kotlin Gradle Plugin gradle82 variant
+All projects evaluated.
+Task name matched 'clean'
+Task name matched 'assembleDebug'
+Selected primary task 'clean' from project :
+Selected primary task 'assembleDebug' from project :
+Tasks to be executed: [task ':app:clean', task ':app:preBuild', task ':app:preDebugBuild', task ':app:mergeDebugNativeDebugMetadata', task ':app:checkKotlinGradlePluginConfigurationErrors', task ':app:dataBindingMergeDependencyArtifactsDebug', task ':app:generateDebugResValues', task ':app:generateDebugResources', task ':app:mergeDebugResources', task ':app:packageDebugResources', task ':app:processDebugNavigationResources', task ':app:parseDebugLocalResources', task ':app:dataBindingGenBaseClassesDebug', task ':app:checkDebugAarMetadata', task ':app:compileDebugNavigationResources', task ':app:mapDebugSourceSetPaths', task ':app:createDebugCompatibleScreenManifests', task ':app:extractDeepLinksDebug', task ':app:processDebugMainManifest', task ':app:processDebugManifest', task ':app:processDebugManifestForPackage', task ':app:processDebugResources', task ':app:compileDebugKotlin', task ':app:javaPreCompileDebug', task ':app:compileDebugJavaWithJavac', task ':app:mergeDebugShaders', task ':app:compileDebugShaders', task ':app:generateDebugAssets', task ':app:mergeDebugAssets', task ':app:compressDebugAssets', task ':app:processDebugJavaRes', task ':app:mergeDebugJavaResource', task ':app:checkDebugDuplicateClasses', task ':app:desugarDebugFileDependencies', task ':app:mergeExtDexDebug', task ':app:mergeLibDexDebug', task ':app:dexBuilderDebug', task ':app:mergeProjectDexDebug', task ':app:mergeDebugJniLibFolders', task ':app:mergeDebugNativeLibs', task ':app:stripDebugDebugSymbols', task ':app:validateSigningDebug', task ':app:writeDebugAppMetadata', task ':app:writeDebugSigningConfigVersions', task ':app:packageDebug', task ':app:createDebugApkListingFileRedirect', task ':app:assembleDebug']
+Tasks that were excluded: []
+Resolve mutations for :app:clean (Thread[#112,included builds,5,main]) started.
+:app:clean (Thread[#112,included builds,5,main]) started.
+destroyer locations for task group 0 (Thread[#113,Execution worker,5,main]) started.
+
+> Task :app:clean
+Caching disabled for task ':app:clean' because:
+  Build cache is disabled
+Task ':app:clean' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Resolve mutations for :app:preBuild (Thread[#113,Execution worker,5,main]) started.
+:app:preBuild (Thread[#113,Execution worker,5,main]) started.
+
+> Task :app:preBuild UP-TO-DATE
+Skipping task ':app:preBuild' as it has no actions.
+Resolve mutations for :app:preDebugBuild (Thread[#113,Execution worker,5,main]) started.
+:app:preDebugBuild (Thread[#113,Execution worker,5,main]) started.
+
+> Task :app:preDebugBuild UP-TO-DATE
+Skipping task ':app:preDebugBuild' as it has no actions.
+Resolve mutations for :app:mergeDebugNativeDebugMetadata (Thread[#113,Execution worker,5,main]) started.
+:app:mergeDebugNativeDebugMetadata (Thread[#113,Execution worker,5,main]) started.
+
+> Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+Skipping task ':app:mergeDebugNativeDebugMetadata' as it has no source files and no previous output files.
+Resolve mutations for :app:checkKotlinGradlePluginConfigurationErrors (Thread[#112,included builds,5,main]) started.
+:app:checkKotlinGradlePluginConfigurationErrors (Thread[#112,included builds,5,main]) started.
+
+> Task :app:checkKotlinGradlePluginConfigurationErrors
+Caching disabled for task ':app:checkKotlinGradlePluginConfigurationErrors' because:
+  Build cache is disabled
+Task ':app:checkKotlinGradlePluginConfigurationErrors' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+Resolve mutations for :app:dataBindingMergeDependencyArtifactsDebug (Thread[#112,included builds,5,main]) started.
+:app:dataBindingMergeDependencyArtifactsDebug (Thread[#112,included builds,5,main]) started.
+Resolve mutations for :app:generateDebugResValues (Thread[#115,Execution worker Thread 3,5,main]) started.
+:app:generateDebugResValues (Thread[#115,Execution worker Thread 3,5,main]) started.
+
+> Task :app:generateDebugResValues
+Caching disabled for task ':app:generateDebugResValues' because:
+  Build cache is disabled
+Task ':app:generateDebugResValues' is not up-to-date because:
+  Output property 'outputDirectory' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\generated\res\resValues\debug has been removed.
+Resolve mutations for :app:generateDebugResources (Thread[#115,Execution worker Thread 3,5,main]) started.
+:app:generateDebugResources (Thread[#115,Execution worker Thread 3,5,main]) started.
+
+> Task :app:dataBindingMergeDependencyArtifactsDebug
+Caching disabled for task ':app:dataBindingMergeDependencyArtifactsDebug' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:dataBindingMergeDependencyArtifactsDebug' is not up-to-date because:
+  Output property 'outFolder' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\data_binding_dependency_artifacts\debug\dataBindingMergeDependencyArtifactsDebug has been removed.
+
+> Task :app:generateDebugResources
+Caching disabled for task ':app:generateDebugResources' because:
+  Build cache is disabled
+Task ':app:generateDebugResources' is not up-to-date because:
+  Output property 'validationReportFile' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\nested_resources_validation_report\debug\generateDebugResources\nestedResourcesValidationReport.txt has been removed.
+Resolve mutations for :app:mergeDebugResources (Thread[#115,Execution worker Thread 3,5,main]) started.
+:app:mergeDebugResources (Thread[#115,Execution worker Thread 3,5,main]) started.
+
+> Task :app:mergeDebugResources
+Caching disabled for task ':app:mergeDebugResources' because:
+  Build cache is disabled
+Task ':app:mergeDebugResources' is not up-to-date because:
+  Output property 'blameLogOutputFolder' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res_blame_folder\debug\mergeDebugResources\out has been removed.
+  Output property 'blameLogOutputFolder' file C:\Users\PC\Desktop\NCDScreener 1\app\build\intermediates\merged_res_blame_folder\debug\mergeDebugResources\out\multi-v2 has been removed.
+  Output property 'blameLogOutputFolder' file C:\Users\PC\Desktop\NCDScreener 1\app\build\intermediates\merged_res_blame_folder\debug\mergeDebugResources\out\multi-v2\mergeDebugResources.json has been removed.
+  and more...
+The input changes require a full rebuild for incremental task ':app:mergeDebugResources'.
+[MergeResources] Inputs are non-incremental full task action.
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values\values.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values_values.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-pt\values-pt.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-pt_values-pt.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-hi\values-hi.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-hi_values-hi.arsc.flat
+
+Resolve mutations for :app:packageDebugResources (Thread[#114,Execution worker Thread 2,5,main]) started.
+:app:packageDebugResources (Thread[#114,Execution worker Thread 2,5,main]) started.
+
+> Task :app:mergeDebugResources
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-hr\values-hr.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-hr_values-hr.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-hu\values-hu.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-hu_values-hu.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-h480dp-v13\values-h480dp-v13.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-h480dp-v13_values-h480dp-v13.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ldltr-v21\values-ldltr-v21.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ldltr-v21_values-ldltr-v21.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-w320dp-land-v13\values-w320dp-land-v13.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-w320dp-land-v13_values-w320dp-land-v13.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-am\values-am.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-am_values-am.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-as\values-as.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-as_values-as.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ja\values-ja.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ja_values-ja.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v24\values-v24.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v24_values-v24.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v26\values-v26.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v26_values-v26.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-sw600dp-v13\values-sw600dp-v13.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-sw600dp-v13_values-sw600dp-v13.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-bg\values-bg.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-bg_values-bg.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v16\values-v16.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v16_values-v16.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v31\values-v31.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v31_values-v31.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-w360dp-port-v13\values-w360dp-port-v13.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-w360dp-port-v13_values-w360dp-port-v13.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-zh-rHK\values-zh-rHK.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-zh-rHK_values-zh-rHK.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-iw\values-iw.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-iw_values-iw.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v21\values-v21.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v21_values-v21.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-sk\values-sk.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-sk_values-sk.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-sq\values-sq.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-sq_values-sq.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v22\values-v22.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v22_values-v22.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-h360dp-land-v13\values-h360dp-land-v13.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-h360dp-land-v13_values-h360dp-land-v13.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-h480dp-land-v13\values-h480dp-land-v13.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-h480dp-land-v13_values-h480dp-land-v13.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ru\values-ru.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ru_values-ru.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-bn\values-bn.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-bn_values-bn.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-kn\values-kn.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-kn_values-kn.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ta\values-ta.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ta_values-ta.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-h720dp-v13\values-h720dp-v13.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-h720dp-v13_values-h720dp-v13.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-xlarge-v4\values-xlarge-v4.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-xlarge-v4_values-xlarge-v4.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-de\values-de.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-de_values-de.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-en-rIN\values-en-rIN.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-en-rIN_values-en-rIN.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ur\values-ur.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ur_values-ur.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-uz\values-uz.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-uz_values-uz.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ka\values-ka.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ka_values-ka.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-el\values-el.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-el_values-el.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-et\values-et.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-et_values-et.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-sl\values-sl.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-sl_values-sl.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-nb\values-nb.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-nb_values-nb.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-sr\values-sr.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-sr_values-sr.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ne\values-ne.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ne_values-ne.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-sv\values-sv.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-sv_values-sv.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ky\values-ky.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ky_values-ky.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-fi\values-fi.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-fi_values-fi.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-te\values-te.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-te_values-te.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-da\values-da.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-da_values-da.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-lo\values-lo.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-lo_values-lo.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-h550dp-port-v13\values-h550dp-port-v13.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-h550dp-port-v13_values-h550dp-port-v13.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-mk\values-mk.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-mk_values-mk.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-mr\values-mr.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-mr_values-mr.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-hdpi-v4\values-hdpi-v4.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-hdpi-v4_values-hdpi-v4.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-gl\values-gl.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-gl_values-gl.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-pl\values-pl.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-pl_values-pl.arsc.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\drawable\ic_launcher_foreground.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\drawable_ic_launcher_foreground.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\activity_login.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_activity_login.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\activity_main.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_activity_main.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\fragment_counseling.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_fragment_counseling.xml.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-zh-rTW\values-zh-rTW.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-zh-rTW_values-zh-rTW.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-eu\values-eu.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-eu_values-eu.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-port\values-port.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-port_values-port.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-fa\values-fa.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-fa_values-fa.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-en-rXC\values-en-rXC.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-en-rXC_values-en-rXC.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-en-rGB\values-en-rGB.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-en-rGB_values-en-rGB.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-b+es+419\values-b+es+419.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-b+es+419_values-b+es+419.arsc.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\menu\main_menu.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\menu_main_menu.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\fragment_register_patient.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_fragment_register_patient.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\fragment_screening_list.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_fragment_screening_list.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\fragment_profile.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_fragment_profile.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\drawable\ic_launcher_background.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\drawable_ic_launcher_background.xml.flat
+Compiling file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\mipmap-xxxhdpi\ic_launcher.webp to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-xxxhdpi_ic_launcher.webp.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\fragment_screening_form.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_fragment_screening_form.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\item_condition.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_item_condition.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\mipmap-anydpi-v26\ic_launcher.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-anydpi-v26_ic_launcher.xml.flat
+Compiling file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\mipmap-mdpi\ic_launcher_round.webp to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-mdpi_ic_launcher_round.webp.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\fragment_settings.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_fragment_settings.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\xml\data_extraction_rules.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\xml_data_extraction_rules.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\anim\slide_out_left.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\anim_slide_out_left.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\item_screening_history.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_item_screening_history.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\dialog_forgot_password.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_dialog_forgot_password.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\drawable\gradient_today.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\drawable_gradient_today.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\anim\fade_out.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\anim_fade_out.xml.flat
+Compiling file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\mipmap-xxxhdpi\ic_launcher_round.webp to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-xxxhdpi_ic_launcher_round.webp.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-watch-v21\values-watch-v21.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-watch-v21_values-watch-v21.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-hy\values-hy.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-hy_values-hy.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v18\values-v18.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v18_values-v18.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-af\values-af.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-af_values-af.arsc.flat
+Compiling file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\mipmap-hdpi\ic_launcher.webp to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-hdpi_ic_launcher.webp.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\item_recent_activity.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_item_recent_activity.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\fragment_screening_results.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_fragment_screening_results.xml.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-is\values-is.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-is_values-is.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-b+sr+Latn\values-b+sr+Latn.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-b+sr+Latn_values-b+sr+Latn.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-es-rUS\values-es-rUS.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-es-rUS_values-es-rUS.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v25\values-v25.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v25_values-v25.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-pt-rPT\values-pt-rPT.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-pt-rPT_values-pt-rPT.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ro\values-ro.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ro_values-ro.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-be\values-be.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-be_values-be.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-bs\values-bs.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-bs_values-bs.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v34\values-v34.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v34_values-v34.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v35\values-v35.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v35_values-v35.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-kk\values-kk.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-kk_values-kk.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-sw\values-sw.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-sw_values-sw.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-watch-v20\values-watch-v20.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-watch-v20_values-watch-v20.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-pt-rBR\values-pt-rBR.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-pt-rBR_values-pt-rBR.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-th\values-th.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-th_values-th.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-tr\values-tr.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-tr_values-tr.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-lt\values-lt.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-lt_values-lt.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ldrtl-v17\values-ldrtl-v17.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ldrtl-v17_values-ldrtl-v17.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ml\values-ml.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ml_values-ml.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-h320dp-port-v13\values-h320dp-port-v13.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-h320dp-port-v13_values-h320dp-port-v13.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v17\values-v17.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v17_values-v17.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-in\values-in.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-in_values-in.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-it\values-it.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-it_values-it.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ar\values-ar.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ar_values-ar.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v23\values-v23.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v23_values-v23.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-az\values-az.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-az_values-az.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-fr-rCA\values-fr-rCA.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-fr-rCA_values-fr-rCA.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-my\values-my.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-my_values-my.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-vi\values-vi.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-vi_values-vi.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-w600dp-land-v13\values-w600dp-land-v13.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-w600dp-land-v13_values-w600dp-land-v13.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-nl\values-nl.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-nl_values-nl.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-fr\values-fr.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-fr_values-fr.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-land\values-land.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-land_values-land.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-gu\values-gu.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-gu_values-gu.arsc.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\fragment_screening_detail.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_fragment_screening_detail.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\item_patient.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_item_patient.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\drawable\gradient_header.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\drawable_gradient_header.xml.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-zu\values-zu.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-zu_values-zu.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-v28\values-v28.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-v28_values-v28.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-rw\values-rw.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-rw_values-rw.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-en-rCA\values-en-rCA.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-en-rCA_values-en-rCA.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-si\values-si.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-si_values-si.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ca\values-ca.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ca_values-ca.arsc.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\drawable\gradient_screenings.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\drawable_gradient_screenings.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\dialog_create_account.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_dialog_create_account.xml.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-km\values-km.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-km_values-km.arsc.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\fragment_patient_detail.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_fragment_patient_detail.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\fragment_patient_list.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_fragment_patient_list.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\mipmap-anydpi-v26\ic_launcher_round.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-anydpi-v26_ic_launcher_round.xml.flat
+Compiling file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\mipmap-xhdpi\ic_launcher_round.webp to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-xhdpi_ic_launcher_round.webp.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\anim\slide_in_right.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\anim_slide_in_right.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\xml\backup_rules.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\xml_backup_rules.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\fragment_home.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_fragment_home.xml.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ko\values-ko.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ko_values-ko.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-cs\values-cs.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-cs_values-cs.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-tl\values-tl.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-tl_values-tl.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-en-rAU\values-en-rAU.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-en-rAU_values-en-rAU.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-lv\values-lv.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-lv_values-lv.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-uk\values-uk.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-uk_values-uk.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-mn\values-mn.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-mn_values-mn.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-ms\values-ms.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-ms_values-ms.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-es\values-es.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-es_values-es.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-w400dp-port-v13\values-w400dp-port-v13.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-w400dp-port-v13_values-w400dp-port-v13.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-night-v8\values-night-v8.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-night-v8_values-night-v8.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-zh-rCN\values-zh-rCN.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-zh-rCN_values-zh-rCN.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-large-v4\values-large-v4.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-large-v4_values-large-v4.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-or\values-or.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-or_values-or.arsc.flat
+Compiling XML table C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir\values-pa\values-pa.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\values-pa_values-pa.arsc.flat
+Compiling file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\mipmap-mdpi\ic_launcher.webp to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-mdpi_ic_launcher.webp.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\item_service_request.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_item_service_request.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\custom_toast.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_custom_toast.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\anim\fade_in.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\anim_fade_in.xml.flat
+Compiling file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\mipmap-xxhdpi\ic_launcher.webp to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-xxhdpi_ic_launcher.webp.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\item_observation.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_item_observation.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\anim\slide_up.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\anim_slide_up.xml.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\drawable\gradient_patients.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\drawable_gradient_patients.xml.flat
+Compiling file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\mipmap-xhdpi\ic_launcher.webp to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-xhdpi_ic_launcher.webp.flat
+Compiling file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\mipmap-hdpi\ic_launcher_round.webp to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-hdpi_ic_launcher_round.webp.flat
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir\layout\item_questionnaire.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\layout_item_questionnaire.xml.flat
+Compiling file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\res\mipmap-xxhdpi\ic_launcher_round.webp to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_res\debug\mergeDebugResources\mipmap-xxhdpi_ic_launcher_round.webp.flat
+
+> Task :app:packageDebugResources
+Caching disabled for task ':app:packageDebugResources' because:
+  Build cache is disabled
+Task ':app:packageDebugResources' is not up-to-date because:
+  Output property 'dataBindingLayoutInfoOutFolder' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\data_binding_layout_info_type_package\debug\packageDebugResources\out has been removed.
+  Output property 'dataBindingLayoutInfoOutFolder' file C:\Users\PC\Desktop\NCDScreener 1\app\build\intermediates\data_binding_layout_info_type_package\debug\packageDebugResources\out\activity_login-layout.xml has been removed.
+  Output property 'dataBindingLayoutInfoOutFolder' file C:\Users\PC\Desktop\NCDScreener 1\app\build\intermediates\data_binding_layout_info_type_package\debug\packageDebugResources\out\activity_main-layout.xml has been removed.
+  and more...
+The input changes require a full rebuild for incremental task ':app:packageDebugResources'.
+[MergeResources] Inputs are non-incremental full task action.
+Resolve mutations for :app:processDebugNavigationResources (Thread[#114,Execution worker Thread 2,5,main]) started.
+:app:processDebugNavigationResources (Thread[#114,Execution worker Thread 2,5,main]) started.
+
+> Task :app:processDebugNavigationResources
+Caching disabled for task ':app:processDebugNavigationResources' because:
+  Build cache is disabled
+Task ':app:processDebugNavigationResources' is not up-to-date because:
+  Output property 'outputDir' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\generated\updated_navigation_xml\debug has been removed.
+  Output property 'outputDir' file C:\Users\PC\Desktop\NCDScreener 1\app\build\generated\updated_navigation_xml\debug\navigation has been removed.
+  Output property 'outputDir' file C:\Users\PC\Desktop\NCDScreener 1\app\build\generated\updated_navigation_xml\debug\navigation\nav_graph.xml has been removed.
+Resolve mutations for :app:parseDebugLocalResources (Thread[#114,Execution worker Thread 2,5,main]) started.
+:app:parseDebugLocalResources (Thread[#114,Execution worker Thread 2,5,main]) started.
+Resolve mutations for :app:checkDebugAarMetadata (Thread[#115,Execution worker Thread 3,5,main]) started.
+:app:checkDebugAarMetadata (Thread[#115,Execution worker Thread 3,5,main]) started.
+Resolve mutations for :app:compileDebugNavigationResources (Thread[#113,Execution worker,5,main]) started.
+:app:compileDebugNavigationResources (Thread[#113,Execution worker,5,main]) started.
+Resolve mutations for :app:mapDebugSourceSetPaths (Thread[#112,included builds,5,main]) started.
+:app:mapDebugSourceSetPaths (Thread[#112,included builds,5,main]) started.
+
+> Task :app:compileDebugNavigationResources
+Caching disabled for task ':app:compileDebugNavigationResources' because:
+  Build cache is disabled
+Task ':app:compileDebugNavigationResources' is not up-to-date because:
+  Output property 'outputDir' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\compiled_navigation_res\debug\compileDebugNavigationResources has been removed.
+  Output property 'outputDir' file C:\Users\PC\Desktop\NCDScreener 1\app\build\intermediates\compiled_navigation_res\debug\compileDebugNavigationResources\navigation has been removed.
+  Output property 'outputDir' file C:\Users\PC\Desktop\NCDScreener 1\app\build\intermediates\compiled_navigation_res\debug\compileDebugNavigationResources\navigation_nav_graph.xml.flat has been removed.
+The input changes require a full rebuild for incremental task ':app:compileDebugNavigationResources'.
+Compiling xml file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\generated\updated_navigation_xml\debug\navigation\nav_graph.xml to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\compiled_navigation_res\debug\compileDebugNavigationResources\navigation_nav_graph.xml.flat
+
+> Task :app:mapDebugSourceSetPaths
+Caching disabled for task ':app:mapDebugSourceSetPaths' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:mapDebugSourceSetPaths' is not up-to-date because:
+  Value of input property 'allGeneratedRes' has changed for task ':app:mapDebugSourceSetPaths'
+  Value of input property 'generatedPngsOutputDir' has changed for task ':app:mapDebugSourceSetPaths'
+  Value of input property 'generatedResDir' has changed for task ':app:mapDebugSourceSetPaths'
+  and more...
+Resolve mutations for :app:createDebugCompatibleScreenManifests (Thread[#112,included builds,5,main]) started.
+:app:createDebugCompatibleScreenManifests (Thread[#112,included builds,5,main]) started.
+
+> Task :app:checkDebugAarMetadata
+Caching disabled for task ':app:checkDebugAarMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:checkDebugAarMetadata' is not up-to-date because:
+  Output property 'dummyOutputDirectory' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\aar_metadata_check\debug\checkDebugAarMetadata has been removed.
+
+> Task :app:createDebugCompatibleScreenManifests
+Caching disabled for task ':app:createDebugCompatibleScreenManifests' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:createDebugCompatibleScreenManifests' is not up-to-date because:
+  Output property 'outputFolder' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\compatible_screen_manifest\debug\createDebugCompatibleScreenManifests has been removed.
+  Output property 'outputFolder' file C:\Users\PC\Desktop\NCDScreener 1\app\build\intermediates\compatible_screen_manifest\debug\createDebugCompatibleScreenManifests\output-metadata.json has been removed.
+Resolve mutations for :app:extractDeepLinksDebug (Thread[#112,included builds,5,main]) started.
+:app:extractDeepLinksDebug (Thread[#115,Execution worker Thread 3,5,main]) started.
+
+> Task :app:extractDeepLinksDebug
+Caching disabled for task ':app:extractDeepLinksDebug' because:
+  Build cache is disabled
+Task ':app:extractDeepLinksDebug' is not up-to-date because:
+  Output property 'navigationJson' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\navigation_json\debug\extractDeepLinksDebug\navigation.json has been removed.
+Resolve mutations for :app:processDebugMainManifest (Thread[#115,Execution worker Thread 3,5,main]) started.
+:app:processDebugMainManifest (Thread[#115,Execution worker Thread 3,5,main]) started.
+
+> Task :app:parseDebugLocalResources
+Caching disabled for task ':app:parseDebugLocalResources' because:
+  Build cache is disabled
+Task ':app:parseDebugLocalResources' is not up-to-date because:
+  Output property 'librarySymbolsFile' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\local_only_symbol_list\debug\parseDebugLocalResources\R-def.txt has been removed.
+The input changes require a full rebuild for incremental task ':app:parseDebugLocalResources'.
+
+> Task :app:processDebugMainManifest
+Caching disabled for task ':app:processDebugMainManifest' because:
+  Build cache is disabled
+Task ':app:processDebugMainManifest' is not up-to-date because:
+  Value of input property 'optionalFeatures' has changed for task ':app:processDebugMainManifest'
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\2365a3e8e92e9feea8a92ca19f949ca7\transformed\viewbinding-8.13.1\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\aaa87d851d6ec1729d3e839bf4d286de\transformed\navigation-common-2.8.3\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\45300589553eb3882ccee2d8d3925286\transformed\navigation-runtime-2.8.3\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\e3469785a43e94013294b9ff87d6dc65\transformed\navigation-fragment-2.8.3\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\df0790be6aae7315c4e28476c86e464d\transformed\navigation-ui-2.8.3\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\9abc850be43e54aa054b4c9de9f2ebf7\transformed\material-1.13.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\ca65bc49e08474de6a8b663d5376d489\transformed\constraintlayout-2.2.1\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\35ddadf34960fcad5e0e403bc3ca324b\transformed\appcompat-resources-1.7.1\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\dbda42ccb5595d8a9f8f7c3d84ecf33f\transformed\appcompat-1.7.1\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\41ba2d5caded359409ed8ba2cc71835c\transformed\recyclerview-1.3.2\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\771b51033fcb55e08835f9a9bb8c73cd\transformed\viewpager2-1.1.0-beta02\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\0c43298caa6e6a46d54adf47f6aca89a\transformed\fragment-ktx-1.6.2\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\d7fc72e4b1f61baceb9137cc959ef1a9\transformed\play-services-location-21.0.1\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\05db0f293f0582eb3088c59fb4c23018\transformed\play-services-base-18.1.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\a2eb9c29b977d2eb5f19e9118c6d48c3\transformed\play-services-tasks-18.0.2\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\d19bcdb8f95d2a183787bc39b7a03fa0\transformed\play-services-basement-18.1.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\3d95888fb52c04d2727f5c6cec961786\transformed\fragment-1.6.2\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\49a9e1833b93bc01d2fb077650fb7075\transformed\activity-ktx-1.12.1\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\842036feb0fb5f3c768cd1064ec0b08e\transformed\activity-1.12.1\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\0792c51db85cfd7e218fae56ad3cbda7\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\e8a165b371da968a804465ac1f65e097\transformed\emoji2-1.3.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\a6d263e42737e56453a53e4cee56f41e\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\1dc59964070f50c37fb21e7b741efe35\transformed\savedstate-1.2.1\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\eeeaf0f7f215d1cf2254bcc486e2f531\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\1e5c0da610f2b1b239b8d14adb06b353\transformed\lifecycle-viewmodel-ktx-2.8.6\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\e3fb574666a17a834fa9824c667f5567\transformed\lifecycle-process-2.8.6\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\2b2efaaf96aa88cebbbc51f4a3bccf71\transformed\lifecycle-service-2.8.6\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\4dc8f9357a753a3baaa637715a23b8af\transformed\drawerlayout-1.1.1\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\b0acc6bec09651eb33d428ab40360ff6\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\32754c18f5d3f56499a0b36b910de0b6\transformed\slidingpanelayout-1.2.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\2720d34d3a953e36caa9c571af32b377\transformed\transition-1.5.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\09c90357b574cea773d3efa3aa588860\transformed\dynamicanimation-1.1.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\6dc87a5e5cbaec6987f9a11605658046\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\90e0ed7fcc89296337cbacfaf52cb1f0\transformed\vectordrawable-1.1.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\0ba6640c4a77b2b814b5aa4299792068\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\baf5e2c41edf27f85de01c8a041b527e\transformed\graphics-shapes-release\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\534a7b143e46038b8738153105ae3fcc\transformed\core-ktx-1.16.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\d1a8d7d8a2965414f16b04ce19537ea5\transformed\viewpager-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\2d47009d87f89f87fe69fc5d4ce565d5\transformed\customview-1.1.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\27244019797e33a3035536ab62181500\transformed\window-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\658a602a524cd6cd3b88f44b9cae65d5\transformed\loader-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\ff47219f9d791539bba48e745b069403\transformed\core-1.16.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\1818e1afdb3e5dba6f8afa8c430f5acb\transformed\lifecycle-runtime-release\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\ddf134e583c35e334e77f5e59f1c98d6\transformed\lifecycle-livedata-core-ktx-2.8.6\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\1681944298ebc498e07fb4f7c45cc025\transformed\lifecycle-livedata-core-2.8.6\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\d1b4e6201facf61f700e2c855ff85d50\transformed\lifecycle-viewmodel-savedstate-2.8.6\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\2e148cb320e0e6c5ec668c0467a33d7c\transformed\lifecycle-viewmodel-2.8.6\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\3a2b31509faee5d6992527226a4308b5\transformed\lifecycle-viewmodel-release\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\4ed3b2ab3bda834799356508b3e572d2\transformed\lifecycle-livedata-2.8.6\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\22ec3c17020d305279b32f4c8924cda2\transformed\navigationevent\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\58b59e115fa957991f2beb29c318d23d\transformed\core-viewtree-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\7e614ed5b83503df1af740b3a0067768\transformed\room-ktx-2.5.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\aa9a07ac0626578ab5db1c41d17b6d90\transformed\room-runtime-2.5.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\207e333f2e8efe0f25273396b56d7375\transformed\sqlite-framework-2.3.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\642ce60e026f4255196b58b190137083\transformed\sqlite-2.3.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\bb8488468b5b42221470474dddd093a6\transformed\annotation-experimental-1.4.1\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\4470c0683d6a573152634fa244967292\transformed\versionedparcelable-1.1.1\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\2a96d8a890a817acd46f7231269f98df\transformed\cardview-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\28600b36b9b37b68684eab18cf37c42f\transformed\cursoradapter-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\f4e733a58e244b6ba5cebe1cf84e3d69\transformed\profileinstaller-1.4.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\b608147d0c79118f05f9d9141dcae32f\transformed\core-runtime-2.2.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\532ed05556f3e9c68bcfbfa428fe0870\transformed\startup-runtime-1.1.1\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\8af6836d89460fb5af193eec3041e436\transformed\interpolator-1.0.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\386f7590fb15a1436c5a27996e813c82\transformed\tracing-1.2.0\AndroidManifest.xml
+Loading library manifest C:\Users\PC\.gradle\caches\8.13\transforms\d6139258c8e8c936df1038ee30634922\transformed\runtime-annotation\AndroidManifest.xml
+Merging main manifest C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml
+
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\2365a3e8e92e9feea8a92ca19f949ca7\transformed\viewbinding-8.13.1\AndroidManifest.xml
+Merging manifest with lower [androidx.databinding:viewbinding:8.13.1] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.databinding:viewbinding:8.13.1] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\aaa87d851d6ec1729d3e839bf4d286de\transformed\navigation-common-2.8.3\AndroidManifest.xml
+Merging manifest with lower [androidx.navigation:navigation-common:2.8.3] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.navigation:navigation-common:2.8.3] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\45300589553eb3882ccee2d8d3925286\transformed\navigation-runtime-2.8.3\AndroidManifest.xml
+Merging manifest with lower [androidx.navigation:navigation-runtime:2.8.3] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.navigation:navigation-runtime:2.8.3] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\e3469785a43e94013294b9ff87d6dc65\transformed\navigation-fragment-2.8.3\AndroidManifest.xml
+Merging manifest with lower [androidx.navigation:navigation-fragment:2.8.3] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.navigation:navigation-fragment:2.8.3] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\df0790be6aae7315c4e28476c86e464d\transformed\navigation-ui-2.8.3\AndroidManifest.xml
+Merging manifest with lower [androidx.navigation:navigation-ui:2.8.3] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.navigation:navigation-ui:2.8.3] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\9abc850be43e54aa054b4c9de9f2ebf7\transformed\material-1.13.0\AndroidManifest.xml
+Merging manifest with lower [com.google.android.material:material:1.13.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.android.material:material:1.13.0] AndroidManifest.xml:20:5-44
+application defined in both files...
+Merging application with lower [com.google.android.material:material:1.13.0] AndroidManifest.xml:22:5-20
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\ca65bc49e08474de6a8b663d5376d489\transformed\constraintlayout-2.2.1\AndroidManifest.xml
+Merging manifest with lower [androidx.constraintlayout:constraintlayout:2.2.1] AndroidManifest.xml:2:1-9:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.constraintlayout:constraintlayout:2.2.1] AndroidManifest.xml:5:5-44
+application defined in both files...
+Merging application with lower [androidx.constraintlayout:constraintlayout:2.2.1] AndroidManifest.xml:7:5-20
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\35ddadf34960fcad5e0e403bc3ca324b\transformed\appcompat-resources-1.7.1\AndroidManifest.xml
+Merging manifest with lower [androidx.appcompat:appcompat-resources:1.7.1] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.appcompat:appcompat-resources:1.7.1] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\dbda42ccb5595d8a9f8f7c3d84ecf33f\transformed\appcompat-1.7.1\AndroidManifest.xml
+Merging manifest with lower [androidx.appcompat:appcompat:1.7.1] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.appcompat:appcompat:1.7.1] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\41ba2d5caded359409ed8ba2cc71835c\transformed\recyclerview-1.3.2\AndroidManifest.xml
+Merging manifest with lower [androidx.recyclerview:recyclerview:1.3.2] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.recyclerview:recyclerview:1.3.2] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\771b51033fcb55e08835f9a9bb8c73cd\transformed\viewpager2-1.1.0-beta02\AndroidManifest.xml
+Merging manifest with lower [androidx.viewpager2:viewpager2:1.1.0-beta02] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.viewpager2:viewpager2:1.1.0-beta02] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\0c43298caa6e6a46d54adf47f6aca89a\transformed\fragment-ktx-1.6.2\AndroidManifest.xml
+Merging manifest with lower [androidx.fragment:fragment-ktx:1.6.2] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.fragment:fragment-ktx:1.6.2] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\d7fc72e4b1f61baceb9137cc959ef1a9\transformed\play-services-location-21.0.1\AndroidManifest.xml
+Merging manifest with lower [com.google.android.gms:play-services-location:21.0.1] AndroidManifest.xml:2:1-9:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.android.gms:play-services-location:21.0.1] AndroidManifest.xml:5:5-44
+application defined in both files...
+Merging application with lower [com.google.android.gms:play-services-location:21.0.1] AndroidManifest.xml:7:5-20
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\05db0f293f0582eb3088c59fb4c23018\transformed\play-services-base-18.1.0\AndroidManifest.xml
+Merging manifest with lower [com.google.android.gms:play-services-base:18.1.0] AndroidManifest.xml:16:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.android.gms:play-services-base:18.1.0] AndroidManifest.xml:18:5-43
+application defined in both files...
+Merging application with lower [com.google.android.gms:play-services-base:18.1.0] AndroidManifest.xml:19:5-23:19
+Adopted [activity: null]
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\a2eb9c29b977d2eb5f19e9118c6d48c3\transformed\play-services-tasks-18.0.2\AndroidManifest.xml
+Merging manifest with lower [com.google.android.gms:play-services-tasks:18.0.2] AndroidManifest.xml:2:1-6:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.android.gms:play-services-tasks:18.0.2] AndroidManifest.xml:4:5-43
+application defined in both files...
+Merging application with lower [com.google.android.gms:play-services-tasks:18.0.2] AndroidManifest.xml:5:5-20
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\d19bcdb8f95d2a183787bc39b7a03fa0\transformed\play-services-basement-18.1.0\AndroidManifest.xml
+Merging manifest with lower [com.google.android.gms:play-services-basement:18.1.0] AndroidManifest.xml:16:1-26:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [com.google.android.gms:play-services-basement:18.1.0] AndroidManifest.xml:18:5-43
+application defined in both files...
+Merging application with lower [com.google.android.gms:play-services-basement:18.1.0] AndroidManifest.xml:20:5-24:19
+Adopted [meta-data: null]
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\3d95888fb52c04d2727f5c6cec961786\transformed\fragment-1.6.2\AndroidManifest.xml
+Merging manifest with lower [androidx.fragment:fragment:1.6.2] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.fragment:fragment:1.6.2] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\49a9e1833b93bc01d2fb077650fb7075\transformed\activity-ktx-1.12.1\AndroidManifest.xml
+Merging manifest with lower [androidx.activity:activity-ktx:1.12.1] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.activity:activity-ktx:1.12.1] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\842036feb0fb5f3c768cd1064ec0b08e\transformed\activity-1.12.1\AndroidManifest.xml
+Merging manifest with lower [androidx.activity:activity:1.12.1] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.activity:activity:1.12.1] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml
+Merging manifest with lower [androidx.work:work-runtime:2.9.1] AndroidManifest.xml:17:1-145:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.work:work-runtime:2.9.1] AndroidManifest.xml:21:5-44
+Adopted [uses-permission: null]
+uses-permission#android.permission.ACCESS_NETWORK_STATE defined in both files...
+Merging uses-permission#android.permission.ACCESS_NETWORK_STATE with lower [androidx.work:work-runtime:2.9.1] AndroidManifest.xml:24:5-79
+Adopted [uses-permission: null]
+Adopted [uses-permission: null]
+application defined in both files...
+Merging application with lower [androidx.work:work-runtime:2.9.1] AndroidManifest.xml:28:5-143:19
+Adopted [provider: null]
+Adopted [service: null]
+Adopted [service: null]
+Adopted [service: null]
+Adopted [receiver: null]
+Adopted [receiver: null]
+Adopted [receiver: null]
+Adopted [receiver: null]
+Adopted [receiver: null]
+Adopted [receiver: null]
+Adopted [receiver: null]
+Adopted [receiver: null]
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\0792c51db85cfd7e218fae56ad3cbda7\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml
+Merging manifest with lower [androidx.emoji2:emoji2-views-helper:1.3.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.emoji2:emoji2-views-helper:1.3.0] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\e8a165b371da968a804465ac1f65e097\transformed\emoji2-1.3.0\AndroidManifest.xml
+Merging manifest with lower [androidx.emoji2:emoji2:1.3.0] AndroidManifest.xml:17:1-35:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.emoji2:emoji2:1.3.0] AndroidManifest.xml:21:5-44
+application defined in both files...
+Merging application with lower [androidx.emoji2:emoji2:1.3.0] AndroidManifest.xml:23:5-33:19
+provider#androidx.startup.InitializationProvider defined in both files...
+Merging provider#androidx.startup.InitializationProvider with lower [androidx.emoji2:emoji2:1.3.0] AndroidManifest.xml:24:9-32:20
+Adopted [meta-data: null]
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\a6d263e42737e56453a53e4cee56f41e\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml
+Merging manifest with lower [androidx.savedstate:savedstate-ktx:1.2.1] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.savedstate:savedstate-ktx:1.2.1] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\1dc59964070f50c37fb21e7b741efe35\transformed\savedstate-1.2.1\AndroidManifest.xml
+Merging manifest with lower [androidx.savedstate:savedstate:1.2.1] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.savedstate:savedstate:1.2.1] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\eeeaf0f7f215d1cf2254bcc486e2f531\transformed\lifecycle-runtime-ktx-release\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.6] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-runtime-ktx-android:2.8.6] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\1e5c0da610f2b1b239b8d14adb06b353\transformed\lifecycle-viewmodel-ktx-2.8.6\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\e3fb574666a17a834fa9824c667f5567\transformed\lifecycle-process-2.8.6\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-process:2.8.6] AndroidManifest.xml:17:1-35:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-process:2.8.6] AndroidManifest.xml:21:5-44
+application defined in both files...
+Merging application with lower [androidx.lifecycle:lifecycle-process:2.8.6] AndroidManifest.xml:23:5-33:19
+provider#androidx.startup.InitializationProvider defined in both files...
+Merging provider#androidx.startup.InitializationProvider with lower [androidx.lifecycle:lifecycle-process:2.8.6] AndroidManifest.xml:24:9-32:20
+Adopted [meta-data: null]
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\2b2efaaf96aa88cebbbc51f4a3bccf71\transformed\lifecycle-service-2.8.6\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-service:2.8.6] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-service:2.8.6] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\4dc8f9357a753a3baaa637715a23b8af\transformed\drawerlayout-1.1.1\AndroidManifest.xml
+Merging manifest with lower [androidx.drawerlayout:drawerlayout:1.1.1] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.drawerlayout:drawerlayout:1.1.1] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\b0acc6bec09651eb33d428ab40360ff6\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml
+Merging manifest with lower [androidx.coordinatorlayout:coordinatorlayout:1.1.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.coordinatorlayout:coordinatorlayout:1.1.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\32754c18f5d3f56499a0b36b910de0b6\transformed\slidingpanelayout-1.2.0\AndroidManifest.xml
+Merging manifest with lower [androidx.slidingpanelayout:slidingpanelayout:1.2.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.slidingpanelayout:slidingpanelayout:1.2.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\2720d34d3a953e36caa9c571af32b377\transformed\transition-1.5.0\AndroidManifest.xml
+Merging manifest with lower [androidx.transition:transition:1.5.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.transition:transition:1.5.0] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\09c90357b574cea773d3efa3aa588860\transformed\dynamicanimation-1.1.0\AndroidManifest.xml
+Merging manifest with lower [androidx.dynamicanimation:dynamicanimation:1.1.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.dynamicanimation:dynamicanimation:1.1.0] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\6dc87a5e5cbaec6987f9a11605658046\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml
+Merging manifest with lower [androidx.vectordrawable:vectordrawable-animated:1.1.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.vectordrawable:vectordrawable-animated:1.1.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\90e0ed7fcc89296337cbacfaf52cb1f0\transformed\vectordrawable-1.1.0\AndroidManifest.xml
+Merging manifest with lower [androidx.vectordrawable:vectordrawable:1.1.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.vectordrawable:vectordrawable:1.1.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\0ba6640c4a77b2b814b5aa4299792068\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.customview:customview-poolingcontainer:1.0.0] AndroidManifest.xml:17:1-23:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.customview:customview-poolingcontainer:1.0.0] AndroidManifest.xml:20:5-21:38
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\baf5e2c41edf27f85de01c8a041b527e\transformed\graphics-shapes-release\AndroidManifest.xml
+Merging manifest with lower [androidx.graphics:graphics-shapes-android:1.0.1] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.graphics:graphics-shapes-android:1.0.1] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\534a7b143e46038b8738153105ae3fcc\transformed\core-ktx-1.16.0\AndroidManifest.xml
+Merging manifest with lower [androidx.core:core-ktx:1.16.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.core:core-ktx:1.16.0] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\d1a8d7d8a2965414f16b04ce19537ea5\transformed\viewpager-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.viewpager:viewpager:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.viewpager:viewpager:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\2d47009d87f89f87fe69fc5d4ce565d5\transformed\customview-1.1.0\AndroidManifest.xml
+Merging manifest with lower [androidx.customview:customview:1.1.0] AndroidManifest.xml:17:1-24:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.customview:customview:1.1.0] AndroidManifest.xml:20:5-22:41
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\27244019797e33a3035536ab62181500\transformed\window-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.window:window:1.0.0] AndroidManifest.xml:17:1-33:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.window:window:1.0.0] AndroidManifest.xml:20:5-22:41
+application defined in both files...
+Merging application with lower [androidx.window:window:1.0.0] AndroidManifest.xml:24:5-31:19
+Adopted [uses-library: null]
+Adopted [uses-library: null]
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\658a602a524cd6cd3b88f44b9cae65d5\transformed\loader-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.loader:loader:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.loader:loader:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\ff47219f9d791539bba48e745b069403\transformed\core-1.16.0\AndroidManifest.xml
+Merging manifest with lower [androidx.core:core:1.16.0] AndroidManifest.xml:17:1-30:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.core:core:1.16.0] AndroidManifest.xml:20:5-44
+Adopted [permission: null]
+Adopted [uses-permission: null]
+application defined in both files...
+Merging application with lower [androidx.core:core:1.16.0] AndroidManifest.xml:28:5-89
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\1818e1afdb3e5dba6f8afa8c430f5acb\transformed\lifecycle-runtime-release\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-runtime-android:2.8.6] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-runtime-android:2.8.6] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\ddf134e583c35e334e77f5e59f1c98d6\transformed\lifecycle-livedata-core-ktx-2.8.6\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.6] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.6] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\1681944298ebc498e07fb4f7c45cc025\transformed\lifecycle-livedata-core-2.8.6\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-livedata-core:2.8.6] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-livedata-core:2.8.6] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\d1b4e6201facf61f700e2c855ff85d50\transformed\lifecycle-viewmodel-savedstate-2.8.6\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.6] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.8.6] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\2e148cb320e0e6c5ec668c0467a33d7c\transformed\lifecycle-viewmodel-2.8.6\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-viewmodel:2.8.6] AndroidManifest.xml:2:1-5:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-viewmodel:2.8.6] AndroidManifest.xml:4:5-43
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\3a2b31509faee5d6992527226a4308b5\transformed\lifecycle-viewmodel-release\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-viewmodel-android:2.8.6] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-viewmodel-android:2.8.6] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\4ed3b2ab3bda834799356508b3e572d2\transformed\lifecycle-livedata-2.8.6\AndroidManifest.xml
+Merging manifest with lower [androidx.lifecycle:lifecycle-livedata:2.8.6] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.lifecycle:lifecycle-livedata:2.8.6] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\22ec3c17020d305279b32f4c8924cda2\transformed\navigationevent\AndroidManifest.xml
+Merging manifest with lower [androidx.navigationevent:navigationevent-android:1.0.1] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.navigationevent:navigationevent-android:1.0.1] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\58b59e115fa957991f2beb29c318d23d\transformed\core-viewtree-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.core:core-viewtree:1.0.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.core:core-viewtree:1.0.0] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\7e614ed5b83503df1af740b3a0067768\transformed\room-ktx-2.5.0\AndroidManifest.xml
+Merging manifest with lower [androidx.room:room-ktx:2.5.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.room:room-ktx:2.5.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\aa9a07ac0626578ab5db1c41d17b6d90\transformed\room-runtime-2.5.0\AndroidManifest.xml
+Merging manifest with lower [androidx.room:room-runtime:2.5.0] AndroidManifest.xml:17:1-31:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.room:room-runtime:2.5.0] AndroidManifest.xml:21:5-44
+application defined in both files...
+Merging application with lower [androidx.room:room-runtime:2.5.0] AndroidManifest.xml:23:5-29:19
+Adopted [service: null]
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\207e333f2e8efe0f25273396b56d7375\transformed\sqlite-framework-2.3.0\AndroidManifest.xml
+Merging manifest with lower [androidx.sqlite:sqlite-framework:2.3.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.sqlite:sqlite-framework:2.3.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\642ce60e026f4255196b58b190137083\transformed\sqlite-2.3.0\AndroidManifest.xml
+Merging manifest with lower [androidx.sqlite:sqlite:2.3.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.sqlite:sqlite:2.3.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\bb8488468b5b42221470474dddd093a6\transformed\annotation-experimental-1.4.1\AndroidManifest.xml
+Merging manifest with lower [androidx.annotation:annotation-experimental:1.4.1] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.annotation:annotation-experimental:1.4.1] AndroidManifest.xml:5:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\4470c0683d6a573152634fa244967292\transformed\versionedparcelable-1.1.1\AndroidManifest.xml
+Merging manifest with lower [androidx.versionedparcelable:versionedparcelable:1.1.1] AndroidManifest.xml:17:1-27:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.versionedparcelable:versionedparcelable:1.1.1] AndroidManifest.xml:20:5-22:41
+application defined in both files...
+Merging application with lower [androidx.versionedparcelable:versionedparcelable:1.1.1] AndroidManifest.xml:24:5-25:19
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\2a96d8a890a817acd46f7231269f98df\transformed\cardview-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.cardview:cardview:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.cardview:cardview:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\28600b36b9b37b68684eab18cf37c42f\transformed\cursoradapter-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.cursoradapter:cursoradapter:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.cursoradapter:cursoradapter:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\f4e733a58e244b6ba5cebe1cf84e3d69\transformed\profileinstaller-1.4.0\AndroidManifest.xml
+Merging manifest with lower [androidx.profileinstaller:profileinstaller:1.4.0] AndroidManifest.xml:17:1-55:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.profileinstaller:profileinstaller:1.4.0] AndroidManifest.xml:21:5-44
+application defined in both files...
+Merging application with lower [androidx.profileinstaller:profileinstaller:1.4.0] AndroidManifest.xml:23:5-53:19
+provider#androidx.startup.InitializationProvider defined in both files...
+Merging provider#androidx.startup.InitializationProvider with lower [androidx.profileinstaller:profileinstaller:1.4.0] AndroidManifest.xml:24:9-32:20
+Adopted [meta-data: null]
+Adopted [receiver: null]
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\b608147d0c79118f05f9d9141dcae32f\transformed\core-runtime-2.2.0\AndroidManifest.xml
+Merging manifest with lower [androidx.arch.core:core-runtime:2.2.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.arch.core:core-runtime:2.2.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\532ed05556f3e9c68bcfbfa428fe0870\transformed\startup-runtime-1.1.1\AndroidManifest.xml
+Merging manifest with lower [androidx.startup:startup-runtime:1.1.1] AndroidManifest.xml:17:1-33:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.startup:startup-runtime:1.1.1] AndroidManifest.xml:21:5-23:41
+application defined in both files...
+Merging application with lower [androidx.startup:startup-runtime:1.1.1] AndroidManifest.xml:25:5-31:19
+provider#androidx.startup.InitializationProvider defined in both files...
+Merging provider#androidx.startup.InitializationProvider with lower [androidx.startup:startup-runtime:1.1.1] AndroidManifest.xml:26:9-30:34
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\8af6836d89460fb5af193eec3041e436\transformed\interpolator-1.0.0\AndroidManifest.xml
+Merging manifest with lower [androidx.interpolator:interpolator:1.0.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.interpolator:interpolator:1.0.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\386f7590fb15a1436c5a27996e813c82\transformed\tracing-1.2.0\AndroidManifest.xml
+Merging manifest with lower [androidx.tracing:tracing:1.2.0] AndroidManifest.xml:17:1-22:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.tracing:tracing:1.2.0] AndroidManifest.xml:20:5-44
+Merging library manifest C:\Users\PC\.gradle\caches\8.13\transforms\d6139258c8e8c936df1038ee30634922\transformed\runtime-annotation\AndroidManifest.xml
+Merging manifest with lower [androidx.compose.runtime:runtime-annotation-android:1.9.0] AndroidManifest.xml:2:1-7:12
+uses-sdk defined in both files...
+Merging uses-sdk with lower [androidx.compose.runtime:runtime-annotation-android:1.9.0] AndroidManifest.xml:5:5-44
+Merging result: SUCCESS
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.ncdscreener"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:6:5-79
+12-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:6:22-76
+13    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+13-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:7:5-79
+13-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:7:22-76
+14    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+14-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:8:5-81
+14-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:8:22-78
+15    <uses-permission
+15-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:9:5-10:38
+16        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+16-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:9:22-78
+17        android:maxSdkVersion="28" />
+17-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:10:9-35
+18    <uses-permission
+18-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:11:5-12:38
+19        android:name="android.permission.READ_EXTERNAL_STORAGE"
+19-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:11:22-77
+20        android:maxSdkVersion="32" />
+20-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:12:9-35
+21    <uses-permission android:name="android.permission.WAKE_LOCK" />
+21-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:23:5-68
+21-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:23:22-65
+22    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+22-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:25:5-81
+22-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:25:22-78
+23    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+23-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:26:5-77
+23-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:26:22-74
+24
+25    <permission
+25-->[androidx.core:core:1.16.0] C:\Users\PC\.gradle\caches\8.13\transforms\ff47219f9d791539bba48e745b069403\transformed\core-1.16.0\AndroidManifest.xml:22:5-24:47
+26        android:name="com.example.ncdscreener.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+26-->[androidx.core:core:1.16.0] C:\Users\PC\.gradle\caches\8.13\transforms\ff47219f9d791539bba48e745b069403\transformed\core-1.16.0\AndroidManifest.xml:23:9-81
+27        android:protectionLevel="signature" />
+27-->[androidx.core:core:1.16.0] C:\Users\PC\.gradle\caches\8.13\transforms\ff47219f9d791539bba48e745b069403\transformed\core-1.16.0\AndroidManifest.xml:24:9-44
+28
+29    <uses-permission android:name="com.example.ncdscreener.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+29-->[androidx.core:core:1.16.0] C:\Users\PC\.gradle\caches\8.13\transforms\ff47219f9d791539bba48e745b069403\transformed\core-1.16.0\AndroidManifest.xml:26:5-97
+29-->[androidx.core:core:1.16.0] C:\Users\PC\.gradle\caches\8.13\transforms\ff47219f9d791539bba48e745b069403\transformed\core-1.16.0\AndroidManifest.xml:26:22-94
+30
+31    <application
+31-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:14:5-41:19
+32        android:allowBackup="true"
+32-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:15:9-35
+33        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+33-->[androidx.core:core:1.16.0] C:\Users\PC\.gradle\caches\8.13\transforms\ff47219f9d791539bba48e745b069403\transformed\core-1.16.0\AndroidManifest.xml:28:18-86
+34        android:dataExtractionRules="@xml/data_extraction_rules"
+34-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:16:9-65
+35        android:debuggable="true"
+36        android:extractNativeLibs="false"
+37        android:fullBackupContent="@xml/backup_rules"
+37-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:17:9-54
+38        android:icon="@mipmap/ic_launcher"
+38-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:18:9-43
+39        android:label="@string/app_name"
+39-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:19:9-41
+40        android:roundIcon="@mipmap/ic_launcher_round"
+40-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:20:9-54
+41        android:supportsRtl="true"
+41-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:21:9-35
+42        android:theme="@style/Theme.NCDScreener" >
+42-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:22:9-49
+43        <activity
+43-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:23:9-31:20
+44            android:name="com.example.ncdscreener.activities.LoginActivity"
+44-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:24:13-53
+45            android:exported="true" >
+45-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:25:13-36
+46            <intent-filter>
+46-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:26:13-30:29
+47                <action android:name="android.intent.action.MAIN" />
+47-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:27:17-69
+47-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:27:25-66
+48
+49                <category android:name="android.intent.category.LAUNCHER" />
+49-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:29:17-77
+49-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:29:27-74
+50            </intent-filter>
+51        </activity>
+52        <activity
+52-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:33:9-35:40
+53            android:name="com.example.ncdscreener.activities.MainActivity"
+53-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:34:13-52
+54            android:exported="false" />
+54-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:35:13-37
+55
+56        <service
+56-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:37:9-40:40
+57            android:name="com.example.ncdscreener.services.FhirSyncService"
+57-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:38:13-53
+58            android:enabled="true"
+58-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:39:13-35
+59            android:exported="false" />
+59-->C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\main\AndroidManifest.xml:40:13-37
+60
+61        <activity
+61-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\PC\.gradle\caches\8.13\transforms\05db0f293f0582eb3088c59fb4c23018\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+62            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+62-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\PC\.gradle\caches\8.13\transforms\05db0f293f0582eb3088c59fb4c23018\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+63            android:exported="false"
+63-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\PC\.gradle\caches\8.13\transforms\05db0f293f0582eb3088c59fb4c23018\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+64            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+64-->[com.google.android.gms:play-services-base:18.1.0] C:\Users\PC\.gradle\caches\8.13\transforms\05db0f293f0582eb3088c59fb4c23018\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+65
+66        <meta-data
+66-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\PC\.gradle\caches\8.13\transforms\d19bcdb8f95d2a183787bc39b7a03fa0\transformed\play-services-basement-18.1.0\AndroidManifest.xml:21:9-23:69
+67            android:name="com.google.android.gms.version"
+67-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\PC\.gradle\caches\8.13\transforms\d19bcdb8f95d2a183787bc39b7a03fa0\transformed\play-services-basement-18.1.0\AndroidManifest.xml:22:13-58
+68            android:value="@integer/google_play_services_version" />
+68-->[com.google.android.gms:play-services-basement:18.1.0] C:\Users\PC\.gradle\caches\8.13\transforms\d19bcdb8f95d2a183787bc39b7a03fa0\transformed\play-services-basement-18.1.0\AndroidManifest.xml:23:13-66
+69
+70        <provider
+70-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:29:9-37:20
+71            android:name="androidx.startup.InitializationProvider"
+71-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:30:13-67
+72            android:authorities="com.example.ncdscreener.androidx-startup"
+72-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:31:13-68
+73            android:exported="false" >
+73-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:32:13-37
+74            <meta-data
+74-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:34:13-36:52
+75                android:name="androidx.work.WorkManagerInitializer"
+75-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:35:17-68
+76                android:value="androidx.startup" />
+76-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:36:17-49
+77            <meta-data
+77-->[androidx.emoji2:emoji2:1.3.0] C:\Users\PC\.gradle\caches\8.13\transforms\e8a165b371da968a804465ac1f65e097\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+78                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+78-->[androidx.emoji2:emoji2:1.3.0] C:\Users\PC\.gradle\caches\8.13\transforms\e8a165b371da968a804465ac1f65e097\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+79                android:value="androidx.startup" />
+79-->[androidx.emoji2:emoji2:1.3.0] C:\Users\PC\.gradle\caches\8.13\transforms\e8a165b371da968a804465ac1f65e097\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+80            <meta-data
+80-->[androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\PC\.gradle\caches\8.13\transforms\e3fb574666a17a834fa9824c667f5567\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:29:13-31:52
+81                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+81-->[androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\PC\.gradle\caches\8.13\transforms\e3fb574666a17a834fa9824c667f5567\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:30:17-78
+82                android:value="androidx.startup" />
+82-->[androidx.lifecycle:lifecycle-process:2.8.6] C:\Users\PC\.gradle\caches\8.13\transforms\e3fb574666a17a834fa9824c667f5567\transformed\lifecycle-process-2.8.6\AndroidManifest.xml:31:17-49
+83            <meta-data
+83-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\PC\.gradle\caches\8.13\transforms\f4e733a58e244b6ba5cebe1cf84e3d69\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+84                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+84-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\PC\.gradle\caches\8.13\transforms\f4e733a58e244b6ba5cebe1cf84e3d69\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+85                android:value="androidx.startup" />
+85-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\PC\.gradle\caches\8.13\transforms\f4e733a58e244b6ba5cebe1cf84e3d69\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+86        </provider>
+87
+88        <service
+88-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:39:9-45:35
+89            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+89-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:40:13-88
+90            android:directBootAware="false"
+90-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:41:13-44
+91            android:enabled="@bool/enable_system_alarm_service_default"
+91-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:42:13-72
+92            android:exported="false" />
+92-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:43:13-37
+93        <service
+93-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:46:9-52:35
+94            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+94-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:47:13-84
+95            android:directBootAware="false"
+95-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:48:13-44
+96            android:enabled="@bool/enable_system_job_service_default"
+96-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:49:13-70
+97            android:exported="true"
+97-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:50:13-36
+98            android:permission="android.permission.BIND_JOB_SERVICE" />
+98-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:51:13-69
+99        <service
+99-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:53:9-59:35
+100            android:name="androidx.work.impl.foreground.SystemForegroundService"
+100-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:54:13-81
+101            android:directBootAware="false"
+101-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:55:13-44
+102            android:enabled="@bool/enable_system_foreground_service_default"
+102-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:56:13-77
+103            android:exported="false" />
+103-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:57:13-37
+104
+105        <receiver
+105-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:61:9-66:35
+106            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+106-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:62:13-88
+107            android:directBootAware="false"
+107-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:63:13-44
+108            android:enabled="true"
+108-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:64:13-35
+109            android:exported="false" />
+109-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:65:13-37
+110        <receiver
+110-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:67:9-77:20
+111            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+111-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:68:13-106
+112            android:directBootAware="false"
+112-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:69:13-44
+113            android:enabled="false"
+113-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:70:13-36
+114            android:exported="false" >
+114-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:71:13-37
+115            <intent-filter>
+115-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:73:13-76:29
+116                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+116-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:74:17-87
+116-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:74:25-84
+117                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+117-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:75:17-90
+117-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:75:25-87
+118            </intent-filter>
+119        </receiver>
+120        <receiver
+120-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:78:9-88:20
+121            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+121-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:79:13-104
+122            android:directBootAware="false"
+122-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:80:13-44
+123            android:enabled="false"
+123-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:81:13-36
+124            android:exported="false" >
+124-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:82:13-37
+125            <intent-filter>
+125-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:84:13-87:29
+126                <action android:name="android.intent.action.BATTERY_OKAY" />
+126-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:85:17-77
+126-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:85:25-74
+127                <action android:name="android.intent.action.BATTERY_LOW" />
+127-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:86:17-76
+127-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:86:25-73
+128            </intent-filter>
+129        </receiver>
+130        <receiver
+130-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:89:9-99:20
+131            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+131-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:90:13-104
+132            android:directBootAware="false"
+132-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:91:13-44
+133            android:enabled="false"
+133-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:92:13-36
+134            android:exported="false" >
+134-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:93:13-37
+135            <intent-filter>
+135-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:95:13-98:29
+136                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+136-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:96:17-83
+136-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:96:25-80
+137                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+137-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:97:17-82
+137-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:97:25-79
+138            </intent-filter>
+139        </receiver>
+140        <receiver
+140-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:100:9-109:20
+141            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+141-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:101:13-103
+142            android:directBootAware="false"
+142-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:102:13-44
+143            android:enabled="false"
+143-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:103:13-36
+144            android:exported="false" >
+144-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:104:13-37
+145            <intent-filter>
+145-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:106:13-108:29
+146                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+146-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:107:17-79
+146-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:107:25-76
+147            </intent-filter>
+148        </receiver>
+149        <receiver
+149-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:110:9-121:20
+150            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+150-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:111:13-88
+151            android:directBootAware="false"
+151-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:112:13-44
+152            android:enabled="false"
+152-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:113:13-36
+153            android:exported="false" >
+153-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:114:13-37
+154            <intent-filter>
+154-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:116:13-120:29
+155                <action android:name="android.intent.action.BOOT_COMPLETED" />
+155-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:117:17-79
+155-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:117:25-76
+156                <action android:name="android.intent.action.TIME_SET" />
+156-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:118:17-73
+156-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:118:25-70
+157                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+157-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:119:17-81
+157-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:119:25-78
+158            </intent-filter>
+159        </receiver>
+160        <receiver
+160-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:122:9-131:20
+161            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+161-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:123:13-99
+162            android:directBootAware="false"
+162-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:124:13-44
+163            android:enabled="@bool/enable_system_alarm_service_default"
+163-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:125:13-72
+164            android:exported="false" >
+164-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:126:13-37
+165            <intent-filter>
+165-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:128:13-130:29
+166                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+166-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:129:17-98
+166-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:129:25-95
+167            </intent-filter>
+168        </receiver>
+169        <receiver
+169-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:132:9-142:20
+170            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+170-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:133:13-78
+171            android:directBootAware="false"
+171-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:134:13-44
+172            android:enabled="true"
+172-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:135:13-35
+173            android:exported="true"
+173-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:136:13-36
+174            android:permission="android.permission.DUMP" >
+174-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:137:13-57
+175            <intent-filter>
+175-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:139:13-141:29
+176                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" />
+176-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:140:17-88
+176-->[androidx.work:work-runtime:2.9.1] C:\Users\PC\.gradle\caches\8.13\transforms\0d13122b8d0806a1088efb5bd0527fcf\transformed\work-runtime-2.9.1\AndroidManifest.xml:140:25-85
+177            </intent-filter>
+178        </receiver>
+179
+180        <uses-library
+180-->[androidx.window:window:1.0.0] C:\Users\PC\.gradle\caches\8.13\transforms\27244019797e33a3035536ab62181500\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+181            android:name="androidx.window.extensions"
+181-->[androidx.window:window:1.0.0] C:\Users\PC\.gradle\caches\8.13\transforms\27244019797e33a3035536ab62181500\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+182            android:required="false" />
+182-->[androidx.window:window:1.0.0] C:\Users\PC\.gradle\caches\8.13\transforms\27244019797e33a3035536ab62181500\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+183        <uses-library
+183-->[androidx.window:window:1.0.0] C:\Users\PC\.gradle\caches\8.13\transforms\27244019797e33a3035536ab62181500\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+184            android:name="androidx.window.sidecar"
+184-->[androidx.window:window:1.0.0] C:\Users\PC\.gradle\caches\8.13\transforms\27244019797e33a3035536ab62181500\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+185            android:required="false" />
+185-->[androidx.window:window:1.0.0] C:\Users\PC\.gradle\caches\8.13\transforms\27244019797e33a3035536ab62181500\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+186
+187        <service
+187-->[androidx.room:room-runtime:2.5.0] C:\Users\PC\.gradle\caches\8.13\transforms\aa9a07ac0626578ab5db1c41d17b6d90\transformed\room-runtime-2.5.0\AndroidManifest.xml:24:9-28:63
+188            android:name="androidx.room.MultiInstanceInvalidationService"
+188-->[androidx.room:room-runtime:2.5.0] C:\Users\PC\.gradle\caches\8.13\transforms\aa9a07ac0626578ab5db1c41d17b6d90\transformed\room-runtime-2.5.0\AndroidManifest.xml:25:13-74
+189            android:directBootAware="true"
+189-->[androidx.room:room-runtime:2.5.0] C:\Users\PC\.gradle\caches\8.13\transforms\aa9a07ac0626578ab5db1c41d17b6d90\transformed\room-runtime-2.5.0\AndroidManifest.xml:26:13-43
+190            android:exported="false" />
+190-->[androidx.room:room-runtime:2.5.0] C:\Users\PC\.gradle\caches\8.13\transforms\aa9a07ac0626578ab5db1c41d17b6d90\transformed\room-runtime-2.5.0\AndroidManifest.xml:27:13-37
+191
+192        <receiver
+192-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\PC\.gradle\caches\8.13\transforms\f4e733a58e244b6ba5cebe1cf84e3d69\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+193            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+193-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\PC\.gradle\caches\8.13\transforms\f4e733a58e244b6ba5cebe1cf84e3d69\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+194            android:directBootAware="false"
+194-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\PC\.gradle\caches\8.13\transforms\f4e733a58e244b6ba5cebe1cf84e3d69\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+195            android:enabled="true"
+195-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\PC\.gradle\caches\8.13\transforms\f4e733a58e244b6ba5cebe1cf84e3d69\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+196            android:exported="true"
+196-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\PC\.gradle\caches\8.13\transforms\f4e733a58e244b6ba5cebe1cf84e3d69\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+197            android:permission="android.permission.DUMP" >
+197-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\PC\.gradle\caches\8.13\transforms\f4e733a58e244b6ba5cebe1cf84e3d69\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+198            <intent-filter>
+198-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\PC\.gradle\caches\8.13\transforms\f4e733a58e244b6ba5cebe1cf84e3d69\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+199                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+199-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\PC\.gradle\caches\8.13\transforms\f4e733a58e244b6ba5cebe1cf84e3d69\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+199-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\PC\.gradle\caches\8.13\transforms\f4e733a58e244b6ba5cebe1cf84e3d69\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+200            </intent-filter>
+201            <intent-filter>
+201-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\PC\.gradle\caches\8.13\transforms\f4e733a58e244b6ba5cebe1cf84e3d69\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+202                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+202-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\PC\.gradle\caches\8.13\transforms\f4e733a58e244b6ba5cebe1cf84e3d69\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+202-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\PC\.gradle\caches\8.13\transforms\f4e733a58e244b6ba5cebe1cf84e3d69\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+203            </intent-filter>
+204            <intent-filter>
+204-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\PC\.gradle\caches\8.13\transforms\f4e733a58e244b6ba5cebe1cf84e3d69\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+205                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+205-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\PC\.gradle\caches\8.13\transforms\f4e733a58e244b6ba5cebe1cf84e3d69\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+205-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\PC\.gradle\caches\8.13\transforms\f4e733a58e244b6ba5cebe1cf84e3d69\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+206            </intent-filter>
+207            <intent-filter>
+207-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\PC\.gradle\caches\8.13\transforms\f4e733a58e244b6ba5cebe1cf84e3d69\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+208                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+208-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\PC\.gradle\caches\8.13\transforms\f4e733a58e244b6ba5cebe1cf84e3d69\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+208-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\PC\.gradle\caches\8.13\transforms\f4e733a58e244b6ba5cebe1cf84e3d69\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+209            </intent-filter>
+210        </receiver>
+211    </application>
+212
+213</manifest>
+
+Merged manifest saved to C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_manifest\debug\processDebugMainManifest\AndroidManifest.xml
+Resolve mutations for :app:dataBindingGenBaseClassesDebug (Thread[#115,Execution worker Thread 3,5,main]) started.
+:app:dataBindingGenBaseClassesDebug (Thread[#115,Execution worker Thread 3,5,main]) started.
+
+> Task :app:dataBindingGenBaseClassesDebug
+Caching disabled for task ':app:dataBindingGenBaseClassesDebug' because:
+  Build cache is disabled
+Task ':app:dataBindingGenBaseClassesDebug' is not up-to-date because:
+  Output property 'classInfoBundleDir' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\data_binding_base_class_log_artifact\debug\dataBindingGenBaseClassesDebug\out has been removed.
+  Output property 'classInfoBundleDir' file C:\Users\PC\Desktop\NCDScreener 1\app\build\intermediates\data_binding_base_class_log_artifact\debug\dataBindingGenBaseClassesDebug\out\com.example.ncdscreener-binding_classes.json has been removed.
+  Output property 'logOutFolder' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\incremental\dataBindingGenBaseClassesDebug has been removed.
+  and more...
+The input changes require a full rebuild for incremental task ':app:dataBindingGenBaseClassesDebug'.
+Resolve mutations for :app:processDebugManifest (Thread[#115,Execution worker Thread 3,5,main]) started.
+:app:processDebugManifest (Thread[#115,Execution worker Thread 3,5,main]) started.
+
+> Task :app:processDebugManifest
+Caching disabled for task ':app:processDebugManifest' because:
+  Build cache is disabled
+Task ':app:processDebugManifest' is not up-to-date because:
+  Output property 'multiApkManifestOutputDirectory' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_manifests\debug\processDebugManifest has been removed.
+  Output property 'multiApkManifestOutputDirectory' file C:\Users\PC\Desktop\NCDScreener 1\app\build\intermediates\merged_manifests\debug\processDebugManifest\AndroidManifest.xml has been removed.
+  Output property 'multiApkManifestOutputDirectory' file C:\Users\PC\Desktop\NCDScreener 1\app\build\intermediates\merged_manifests\debug\processDebugManifest\output-metadata.json has been removed.
+Resolve mutations for :app:processDebugManifestForPackage (Thread[#115,Execution worker Thread 3,5,main]) started.
+:app:processDebugManifestForPackage (Thread[#115,Execution worker Thread 3,5,main]) started.
+Resolve mutations for :app:javaPreCompileDebug (Thread[#114,Execution worker Thread 2,5,main]) started.
+:app:javaPreCompileDebug (Thread[#114,Execution worker Thread 2,5,main]) started.
+
+> Task :app:processDebugManifestForPackage
+Custom actions are attached to task ':app:processDebugManifestForPackage'.
+Caching disabled for task ':app:processDebugManifestForPackage' because:
+  Build cache is disabled
+Task ':app:processDebugManifestForPackage' is not up-to-date because:
+  Output property 'packageManifests' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\packaged_manifests\debug\processDebugManifestForPackage has been removed.
+  Output property 'packageManifests' file C:\Users\PC\Desktop\NCDScreener 1\app\build\intermediates\packaged_manifests\debug\processDebugManifestForPackage\AndroidManifest.xml has been removed.
+  Output property 'packageManifests' file C:\Users\PC\Desktop\NCDScreener 1\app\build\intermediates\packaged_manifests\debug\processDebugManifestForPackage\output-metadata.json has been removed.
+Resolve mutations for :app:processDebugResources (Thread[#115,Execution worker Thread 3,5,main]) started.
+:app:processDebugResources (Thread[#115,Execution worker Thread 3,5,main]) started.
+
+> Task :app:javaPreCompileDebug
+Caching disabled for task ':app:javaPreCompileDebug' because:
+  Build cache is disabled
+Task ':app:javaPreCompileDebug' is not up-to-date because:
+  Output property 'annotationProcessorListFile' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\annotation_processor_list\debug\javaPreCompileDebug\annotationProcessors.json has been removed.
+Resolve mutations for :app:mergeDebugShaders (Thread[#113,Execution worker,5,main]) started.
+:app:mergeDebugShaders (Thread[#113,Execution worker,5,main]) started.
+
+> Task :app:mergeDebugShaders
+Caching disabled for task ':app:mergeDebugShaders' because:
+  Build cache is disabled
+  Simple merging task
+Task ':app:mergeDebugShaders' is not up-to-date because:
+  Output property 'outputDir' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_shaders\debug\mergeDebugShaders\out has been removed.
+The input changes require a full rebuild for incremental task ':app:mergeDebugShaders'.
+Resolve mutations for :app:compileDebugShaders (Thread[#113,Execution worker,5,main]) started.
+:app:compileDebugShaders (Thread[#113,Execution worker,5,main]) started.
+
+> Task :app:compileDebugShaders NO-SOURCE
+Skipping task ':app:compileDebugShaders' as it has no source files and no previous output files.
+Resolve mutations for :app:generateDebugAssets (Thread[#113,Execution worker,5,main]) started.
+:app:generateDebugAssets (Thread[#113,Execution worker,5,main]) started.
+
+> Task :app:generateDebugAssets UP-TO-DATE
+Skipping task ':app:generateDebugAssets' as it has no actions.
+Resolve mutations for :app:mergeDebugAssets (Thread[#113,Execution worker,5,main]) started.
+:app:mergeDebugAssets (Thread[#113,Execution worker,5,main]) started.
+
+> Task :app:mergeDebugAssets
+Caching disabled for task ':app:mergeDebugAssets' because:
+  Build cache is disabled
+  Simple merging task
+Task ':app:mergeDebugAssets' is not up-to-date because:
+  Output property 'outputDir' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\assets\debug\mergeDebugAssets has been removed.
+The input changes require a full rebuild for incremental task ':app:mergeDebugAssets'.
+Resolve mutations for :app:compressDebugAssets (Thread[#113,Execution worker,5,main]) started.
+:app:compressDebugAssets (Thread[#113,Execution worker,5,main]) started.
+
+> Task :app:compressDebugAssets
+Caching disabled for task ':app:compressDebugAssets' because:
+  Build cache is disabled
+Task ':app:compressDebugAssets' is not up-to-date because:
+  Output property 'outputDir' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\compressed_assets\debug\compressDebugAssets\out has been removed.
+The input changes require a full rebuild for incremental task ':app:compressDebugAssets'.
+Resolve mutations for :app:checkDebugDuplicateClasses (Thread[#113,Execution worker,5,main]) started.
+:app:checkDebugDuplicateClasses (Thread[#113,Execution worker,5,main]) started.
+Resolve mutations for :app:desugarDebugFileDependencies (Thread[#112,included builds,5,main]) started.
+:app:desugarDebugFileDependencies (Thread[#112,included builds,5,main]) started.
+
+> Task :app:desugarDebugFileDependencies
+Caching disabled for task ':app:desugarDebugFileDependencies' because:
+  Build cache is disabled
+Task ':app:desugarDebugFileDependencies' is not up-to-date because:
+  Output property 'outputDirectory' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\external_file_lib_dex_archives\debug\desugarDebugFileDependencies has been removed.
+Resolve mutations for :app:mergeDebugJniLibFolders (Thread[#112,included builds,5,main]) started.
+:app:mergeDebugJniLibFolders (Thread[#112,included builds,5,main]) started.
+
+> Task :app:mergeDebugJniLibFolders
+Caching disabled for task ':app:mergeDebugJniLibFolders' because:
+  Build cache is disabled
+  Simple merging task
+Task ':app:mergeDebugJniLibFolders' is not up-to-date because:
+  Output property 'outputDir' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\merged_jni_libs\debug\mergeDebugJniLibFolders\out has been removed.
+The input changes require a full rebuild for incremental task ':app:mergeDebugJniLibFolders'.
+Resolve mutations for :app:mergeDebugNativeLibs (Thread[#112,included builds,5,main]) started.
+:app:mergeDebugNativeLibs (Thread[#112,included builds,5,main]) started.
+
+> Task :app:checkDebugDuplicateClasses
+Caching disabled for task ':app:checkDebugDuplicateClasses' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:checkDebugDuplicateClasses' is not up-to-date because:
+  Output property 'dummyOutputDirectory' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\duplicate_classes_check\debug\checkDebugDuplicateClasses has been removed.
+
+> Task :app:mergeDebugNativeLibs NO-SOURCE
+Skipping task ':app:mergeDebugNativeLibs' as it has no source files and no previous output files.
+Resolve mutations for :app:mergeExtDexDebug (Thread[#112,included builds,5,main]) started.
+:app:mergeExtDexDebug (Thread[#112,included builds,5,main]) started.
+Resolve mutations for :app:mergeLibDexDebug (Thread[#113,Execution worker,5,main]) started.
+:app:mergeLibDexDebug (Thread[#113,Execution worker,5,main]) started.
+Resolve mutations for :app:stripDebugDebugSymbols (Thread[#114,Execution worker Thread 2,5,main]) started.
+:app:stripDebugDebugSymbols (Thread[#114,Execution worker Thread 2,5,main]) started.
+
+> Task :app:stripDebugDebugSymbols NO-SOURCE
+Skipping task ':app:stripDebugDebugSymbols' as it has no source files and no previous output files.
+Resolve mutations for :app:validateSigningDebug (Thread[#114,Execution worker Thread 2,5,main]) started.
+:app:validateSigningDebug (Thread[#114,Execution worker Thread 2,5,main]) started.
+
+> Task :app:mergeLibDexDebug
+Caching disabled for task ':app:mergeLibDexDebug' because:
+  Build cache is disabled
+Task ':app:mergeLibDexDebug' is not up-to-date because:
+  Output property 'outputDir' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\dex\debug\mergeLibDexDebug has been removed.
+  Output property 'outputDir' file C:\Users\PC\Desktop\NCDScreener 1\app\build\intermediates\dex\debug\mergeLibDexDebug\0 has been removed.
+  Output property 'outputDir' file C:\Users\PC\Desktop\NCDScreener 1\app\build\intermediates\dex\debug\mergeLibDexDebug\1 has been removed.
+  and more...
+The input changes require a full rebuild for incremental task ':app:mergeLibDexDebug'.
+
+> Task :app:validateSigningDebug
+Caching disabled for task ':app:validateSigningDebug' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:validateSigningDebug' is not up-to-date because:
+  Output property 'dummyOutputDirectory' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\validate_signing_config\debug\validateSigningDebug has been removed.
+Resolve mutations for :app:writeDebugAppMetadata (Thread[#114,Execution worker Thread 2,5,main]) started.
+:app:writeDebugAppMetadata (Thread[#114,Execution worker Thread 2,5,main]) started.
+
+> Task :app:writeDebugAppMetadata
+Caching disabled for task ':app:writeDebugAppMetadata' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:writeDebugAppMetadata' is not up-to-date because:
+  Output property 'outputFile' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\app_metadata\debug\writeDebugAppMetadata\app-metadata.properties has been removed.
+Resolve mutations for :app:writeDebugSigningConfigVersions (Thread[#114,Execution worker Thread 2,5,main]) started.
+:app:writeDebugSigningConfigVersions (Thread[#114,Execution worker Thread 2,5,main]) started.
+
+> Task :app:writeDebugSigningConfigVersions
+Caching disabled for task ':app:writeDebugSigningConfigVersions' because:
+  Build cache is disabled
+  Caching has been disabled for the task
+Task ':app:writeDebugSigningConfigVersions' is not up-to-date because:
+  Output property 'outputFile' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\signing_config_versions\debug\writeDebugSigningConfigVersions\signing-config-versions.json has been removed.
+
+> Task :app:processDebugResources
+Caching disabled for task ':app:processDebugResources' because:
+  Build cache is disabled
+Task ':app:processDebugResources' is not up-to-date because:
+  Value of input property 'useStableIds' has changed for task ':app:processDebugResources'
+The input changes require a full rebuild for incremental task ':app:processDebugResources'.
+AAPT2 aapt2-8.13.1-13719691-windows Daemon #0: starting
+Aapt output file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\linked_resources_binary_format\debug\processDebugResources\linked-resources-binary-format-debug.ap_
+Resolve mutations for :app:compileDebugKotlin (Thread[#115,Execution worker Thread 3,5,main]) started.
+:app:compileDebugKotlin (Thread[#115,Execution worker Thread 3,5,main]) started.
+
+> Task :app:compileDebugKotlin NO-SOURCE
+Skipping task ':app:compileDebugKotlin' as it has no source files and no previous output files.
+Resolve mutations for :app:compileDebugJavaWithJavac (Thread[#115,Execution worker Thread 3,5,main]) started.
+
+> Task :app:mergeExtDexDebug
+Caching disabled for task ':app:mergeExtDexDebug' because:
+  Build cache is disabled
+Task ':app:mergeExtDexDebug' is not up-to-date because:
+  Output property 'outputDir' file C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\dex\debug\mergeExtDexDebug has been removed.
+  Output property 'outputDir' file C:\Users\PC\Desktop\NCDScreener 1\app\build\intermediates\dex\debug\mergeExtDexDebug\classes.dex has been removed.
+  Output property 'outputDir' file C:\Users\PC\Desktop\NCDScreener 1\app\build\intermediates\dex\debug\mergeExtDexDebug\classes2.dex has been removed.
+The input changes require a full rebuild for incremental task ':app:mergeExtDexDebug'.
+Merging to 'C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\build\intermediates\dex\debug\mergeExtDexDebug' with D8 from all or a subset of dex files in C:\Users\PC\.gradle\caches\8.13\transforms\205fdc98b1053fb3ca3a4f46c87cc647\transformed\viewbinding-8.13.1-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\b574a2180b3912dd87f6d2f87d949025\transformed\navigation-common-2.8.3-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\e70bec16b8ec6e567d3f34da53e58576\transformed\navigation-runtime-2.8.3-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\cf713e7b425729b0c8e31cfa129ad273\transformed\navigation-fragment-2.8.3-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\add32b199b4bb20099f80264a4de0b3f\transformed\navigation-ui-2.8.3-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\31132c3b25d0c4d855e866ac0477083f\transformed\material-1.13.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\4b4f3562229dd2e96fcdf1ceba51bd6f\transformed\constraintlayout-2.2.1-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\df7c177d3685a554bdafdc203a61afb3\transformed\appcompat-resources-1.7.1-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\30953e4fa8ca83aaa323996b89fce8dd\transformed\appcompat-1.7.1-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\80ce159707b59d507f14e2a05cfa61fa\transformed\recyclerview-1.3.2-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\b4a43dd9431b655ff45574fef2873891\transformed\viewpager2-1.1.0-beta02-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\474519ab94d113886c581bb663eb3247\transformed\fragment-ktx-1.6.2-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\239871236cf839e630bb09e3b02c5d13\transformed\play-services-location-21.0.1-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\7465f720d8c38ec9370c99c14cc0e856\transformed\play-services-base-18.1.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\ba941f0bb69b6440b23996f4c99df4f6\transformed\play-services-tasks-18.0.2-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\a06861d11fee95671cb9b2a092af492d\transformed\play-services-basement-18.1.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\5a5a4f634f17d008ed2b6b19980b55c7\transformed\fragment-1.6.2-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\4ac886721e06bcfb4685666ce72e32b0\transformed\activity-1.12.1-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\c98119c66a5e449852767cb6bd6d5f25\transformed\work-runtime-2.9.1-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\013da033297105084333be6cf14c93e4\transformed\emoji2-views-helper-1.3.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\9f2a03e840a32dd2463190f66b10ab9d\transformed\emoji2-1.3.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\1f0db08494bb1756ab5e16b32c4b24a0\transformed\savedstate-ktx-1.2.1-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\01556a5c824699dc5adf4bb3f98242ce\transformed\savedstate-1.2.1-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\5a6174010ca5ecd9691973031c8212c5\transformed\lifecycle-common-jvm-2.8.6, C:\Users\PC\.gradle\caches\8.13\transforms\9525bfa4f9b1453d2029a8fe7b63eb39\transformed\lifecycle-process-2.8.6-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\488a585c4fdaf6f7415a470bc10a392f\transformed\lifecycle-service-2.8.6-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\39c343418400c9dff7482f6b74514004\transformed\drawerlayout-1.1.1-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\33ae0b9d07589eaa96c740acbd9bf1bd\transformed\coordinatorlayout-1.1.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\13ec4d98f7f883e541628b70c14fca27\transformed\slidingpanelayout-1.2.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\9f4dd2b97c97aeb113c8091178bd7dd7\transformed\transition-1.5.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\4e60185dd1ab67c8ce9ae6e04a25d7d9\transformed\dynamicanimation-1.1.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\d8cc74d71ea19f060d35bd4454b2d141\transformed\vectordrawable-animated-1.1.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\75fc4e7a840729cf8311f6a71d67244e\transformed\vectordrawable-1.1.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\70086b981b33b61ea302b7de01fa1197\transformed\customview-poolingcontainer-1.0.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\a39cfe0f1d6ac9c981bbe4672caef94e\transformed\graphics-shapes-release-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\9375186000d666dc8029f7619a474cb0\transformed\core-ktx-1.16.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\c37f028a5beb3002584b054075fa403b\transformed\viewpager-1.0.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\e2e1e3e39f2e87849d1eb686f8435072\transformed\customview-1.1.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\ce2e3b11e2625b51a65a4624b9244fd6\transformed\window-1.0.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\2627f3a1b9bbbad62ae11e08b4b103a5\transformed\loader-1.0.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\43ec36b29569b4230381a44e40244c95\transformed\core-1.16.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\fd25b22e624c2709a2a81f6be5419f1f\transformed\lifecycle-runtime-release-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\0ed4fc581d3f5154f6cbcd7e6d93f783\transformed\lifecycle-livedata-core-2.8.6-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\a47cbe017182d94a6f44c3d5a51d90ea\transformed\lifecycle-viewmodel-savedstate-2.8.6-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\f2664ee5351f3b62cc4ade3726d4b83a\transformed\lifecycle-viewmodel-release-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\0b472509c96c65ca4b26a23649b801a7\transformed\lifecycle-livedata-2.8.6-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\671d3f70bfc692df2647c3a38f2665a8\transformed\navigationevent-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\ea2b59863e8594aa287ac188622d8703\transformed\core-viewtree-1.0.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\1dd3692448d1f8d2816671c7e18a732b\transformed\room-ktx-2.5.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\ae1476de8ea224448d1ab41c1f9a2dee\transformed\room-runtime-2.5.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\d62244c0d626f6e62b29bec4da3f0b4c\transformed\sqlite-framework-2.3.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\5cdf190d165c37e5e4a76da5a8f569b9\transformed\sqlite-2.3.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\20ec98f6217fe5f7b5118a461f37f8f1\transformed\annotation-experimental-1.4.1-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\2a5cbcc3fbcbee0095e6ce1bc809811c\transformed\kotlinx-coroutines-android-1.9.0, C:\Users\PC\.gradle\caches\8.13\transforms\d9ee4a309171d07890083c0400020870\transformed\kotlinx-coroutines-core-jvm-1.9.0, C:\Users\PC\.gradle\caches\8.13\transforms\70f3edb4bc31fa1a2899b4a8c5e28434\transformed\room-common-2.5.0, C:\Users\PC\.gradle\caches\8.13\transforms\a2dc0ceb43a95e2af0a28b0864a58a20\transformed\kotlinx-serialization-core-jvm-1.6.3, C:\Users\PC\.gradle\caches\8.13\transforms\07658ac34fe1edcc27b5681b34e9c944\transformed\versionedparcelable-1.1.1-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\34173772ec6e3c2000e0a6ed8fda6f9b\transformed\collection-jvm-1.4.2, C:\Users\PC\.gradle\caches\8.13\transforms\ef099df51f7ef3fbe7973969a966f9a0\transformed\cardview-1.0.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\8977e9a1a9b0b448357a714200c43a50\transformed\cursoradapter-1.0.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\29c75c21c60370e82d76007a6c82dcff\transformed\resourceinspection-annotation-1.0.1, C:\Users\PC\.gradle\caches\8.13\transforms\0bf1cd80c434f6de3bfa0789867cd2a6\transformed\profileinstaller-1.4.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\a0be9999ac799a8e909fb44d6945f649\transformed\constraintlayout-core-1.1.1, C:\Users\PC\.gradle\caches\8.13\transforms\387c478b39d15f0b61e912b3a6b12455\transformed\core-runtime-2.2.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\2d858eba0ae27f99a0a28a62a1a8a430\transformed\core-common-2.2.0, C:\Users\PC\.gradle\caches\8.13\transforms\e73c4ac754774e33581dddc590781540\transformed\startup-runtime-1.1.1-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\54545e578743b478d9baf544b6aef766\transformed\interpolator-1.0.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\8520c18418898e65413e9440b1f5b3ca\transformed\concurrent-futures-1.1.0, C:\Users\PC\.gradle\caches\8.13\transforms\1c0497b068da4e86c0cfaa7084dacbef\transformed\tracing-1.2.0-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\082c2b032c96d8e92394000b1af0b3bc\transformed\annotation-jvm-1.9.1, C:\Users\PC\.gradle\caches\8.13\transforms\9ad63dc280ca6abe1223ea7e64fea313\transformed\runtime-annotation-runtime, C:\Users\PC\.gradle\caches\8.13\transforms\d8355ae546cb6120547256c9691f7735\transformed\kotlin-stdlib-2.0.21, C:\Users\PC\.gradle\caches\8.13\transforms\b3f8842df6bcb866082aa968a8149592\transformed\converter-gson-2.9.0, C:\Users\PC\.gradle\caches\8.13\transforms\9fcf4ece62dcc5dd2cf5b7cbcf679241\transformed\retrofit-2.9.0, C:\Users\PC\.gradle\caches\8.13\transforms\8cde29ad3d78d0ff2558f3a282db53ee\transformed\gson-2.10.1, C:\Users\PC\.gradle\caches\8.13\transforms\5d14f61021a88cd4d2f01a4da9bb26cc\transformed\annotations-23.0.0, C:\Users\PC\.gradle\caches\8.13\transforms\a154f3da381d4abb8176ff0d23fbee42\transformed\error_prone_annotations-2.15.0, C:\Users\PC\.gradle\caches\8.13\transforms\ccf70fbfda7537812272872946940ea9\transformed\okhttp-3.14.9, C:\Users\PC\.gradle\caches\8.13\transforms\27fab555165ac39f7df2af3029fc1c17\transformed\listenablefuture-1.0, C:\Users\PC\.gradle\caches\8.13\transforms\0430cee81eecf748c6c78c21131f1635\transformed\jspecify-1.0.0, C:\Users\PC\.gradle\caches\8.13\transforms\6678cd7a3eef7e2aca26af5277b0435a\transformed\okio-1.17.2, and from all global synthetics files in 
+
+:app:compileDebugJavaWithJavac (Thread[#115,Execution worker Thread 3,5,main]) started.
+
+> Task :app:compileDebugJavaWithJavac
+Caching disabled for JdkImageTransform: C:\Users\PC\AppData\Local\Android\Sdk\platforms\android-36\core-for-system-modules.jar because:
+  Build cache is disabled
+Starting process 'command 'C:\Program Files\Java\jdk-25\bin\jlink.exe''. Working directory: C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app Command: C:\Program Files\Java\jdk-25\bin\jlink.exe --version
+Successfully started process 'command 'C:\Program Files\Java\jdk-25\bin\jlink.exe''
+Starting process 'command 'C:\Program Files\Java\jdk-25\bin\javac.exe''. Working directory: C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app Command: C:\Program Files\Java\jdk-25\bin\javac.exe --system=none --patch-module=java.base=C:\Users\PC\AppData\Local\Android\Sdk\platforms\android-36\core-for-system-modules.jar -d C:\Users\PC\.gradle\caches\8.13\transforms\fdaf2a5721d857f4acdfb3de77b57d7d-df119eee-a175-412d-967d-480a49656d66\transformed\output\temp C:\Users\PC\.gradle\caches\8.13\transforms\fdaf2a5721d857f4acdfb3de77b57d7d-df119eee-a175-412d-967d-480a49656d66\transformed\output\temp\module-info.java
+Successfully started process 'command 'C:\Program Files\Java\jdk-25\bin\javac.exe''
+Starting process 'command 'C:\Program Files\Java\jdk-25\bin\jmod.exe''. Working directory: C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app Command: C:\Program Files\Java\jdk-25\bin\jmod.exe create --module-version 25 --target-platform LINUX-OTHER --class-path C:\Users\PC\.gradle\caches\8.13\transforms\fdaf2a5721d857f4acdfb3de77b57d7d-df119eee-a175-412d-967d-480a49656d66\transformed\output\temp\module.jar C:\Users\PC\.gradle\caches\8.13\transforms\fdaf2a5721d857f4acdfb3de77b57d7d-df119eee-a175-412d-967d-480a49656d66\transformed\output\temp\jmod\java.base.jmod
+Successfully started process 'command 'C:\Program Files\Java\jdk-25\bin\jmod.exe''
+Starting process 'command 'C:\Program Files\Java\jdk-25\bin\jlink.exe''. Working directory: C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app Command: C:\Program Files\Java\jdk-25\bin\jlink.exe --module-path C:\Users\PC\.gradle\caches\8.13\transforms\fdaf2a5721d857f4acdfb3de77b57d7d-df119eee-a175-412d-967d-480a49656d66\transformed\output\temp\jmod --add-modules java.base --output C:\Users\PC\.gradle\caches\8.13\transforms\fdaf2a5721d857f4acdfb3de77b57d7d-df119eee-a175-412d-967d-480a49656d66\transformed\output\jdkImage --disable-plugin system-modules
+Successfully started process 'command 'C:\Program Files\Java\jdk-25\bin\jlink.exe''
+Custom actions are attached to task ':app:compileDebugJavaWithJavac'.
+Caching disabled for task ':app:compileDebugJavaWithJavac' because:
+  Build cache is disabled
+Task ':app:compileDebugJavaWithJavac' is not up-to-date because:
+  Value of input property 'javaCompiler.metadata.languageVersion' has changed for task ':app:compileDebugJavaWithJavac'
+  Value of input property 'javaCompiler.metadata.taskInputs.languageVersion' has changed for task ':app:compileDebugJavaWithJavac'
+  Value of input property 'javaVersion' has changed for task ':app:compileDebugJavaWithJavac'
+The input changes require a full rebuild for incremental task ':app:compileDebugJavaWithJavac'.
+Compilation mode: in-process compilation
+Full recompilation is required because no incremental change information is available. This is usually caused by clean builds or changing compiler arguments.
+Compiling with toolchain 'C:\Program Files\Java\jdk-25'.
+file or directory 'C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1\app\src\debug\java', not found
+Compiling with JDK Java compiler API.
+
+> Task :app:compileDebugJavaWithJavac FAILED
+AAPT2 aapt2-8.13.1-13719691-windows Daemon #0: shutdown
+
+[Incubating] Problems report is available at: file:///C:/Users/PC/Desktop/Mobile_projects/NCDScreener%201/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.13/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+32 actionable tasks: 32 executed
+Watched directory hierarchies: [C:\Users\PC\Desktop\Mobile_projects\NCDScreener 1]

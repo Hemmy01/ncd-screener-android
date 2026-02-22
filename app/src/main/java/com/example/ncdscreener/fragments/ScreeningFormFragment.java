@@ -6,6 +6,9 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -36,6 +39,13 @@ import java.util.List;
 
 public class ScreeningFormFragment extends Fragment {
 
+    private AutoCompleteTextView spinnerPatient;
+    private MaterialButton buttonAddNewPatient;
+    private MaterialButton buttonClearForm;
+    private ProgressBar progressBar;
+    private TextView textBpStatus;
+    private TextView textGlucoseStatus;
+    private TextView textBmiStatus;
     private TextInputEditText editSystolicBp;
     private TextInputEditText editDiastolicBp;
     private TextInputEditText editGlucose;
@@ -62,6 +72,13 @@ public class ScreeningFormFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        spinnerPatient = view.findViewById(R.id.spinner_patient);
+        buttonAddNewPatient = view.findViewById(R.id.button_add_new_patient);
+        buttonClearForm = view.findViewById(R.id.button_clear_form);
+        progressBar = view.findViewById(R.id.progress_bar);
+        textBpStatus = view.findViewById(R.id.text_bp_status);
+        textGlucoseStatus = view.findViewById(R.id.text_glucose_status);
+        textBmiStatus = view.findViewById(R.id.text_bmi_status);
         editSystolicBp = view.findViewById(R.id.edit_systolic_bp);
         editDiastolicBp = view.findViewById(R.id.edit_diastolic_bp);
         editGlucose = view.findViewById(R.id.edit_glucose);
@@ -78,23 +95,19 @@ public class ScreeningFormFragment extends Fragment {
         patientViewModel = new ViewModelProvider(requireActivity()).get(PatientViewModel.class);
         screeningViewModel = new ViewModelProvider(requireActivity()).get(ScreeningViewModel.class);
 
-        // Check if patient is selected when fragment loads
-        Patient currentPatient = patientViewModel.getSelectedPatient().getValue();
-        if (currentPatient == null || currentPatient.getPatientId() == 0) {
-            // No patient selected - navigate back to patient list
-            // User can add a new patient or select existing one from there
-            Toast.makeText(getContext(), "Please select a patient first. You can add a new patient or select an existing one.", Toast.LENGTH_LONG).show();
-            // Navigate to patient list after a short delay to allow toast to show
-            view.postDelayed(() -> {
-                if (getView() != null && isAdded()) {
-                    try {
-                        Navigation.findNavController(getView()).navigate(R.id.patientListFragment);
-                    } catch (Exception e) {
-                        android.util.Log.e("ScreeningFormFragment", "Navigation error", e);
-                    }
-                }
-            }, 2500);
-        }
+        // Load patients into dropdown
+        loadPatients();
+
+        // Handle new patient button
+        buttonAddNewPatient.setOnClickListener(v -> {
+            Navigation.findNavController(v).navigate(R.id.action_screening_form_to_register_patient);
+        });
+
+        // Handle clear form button
+        buttonClearForm.setOnClickListener(v -> clearForm());
+
+        // Auto-focus first field
+        editSystolicBp.requestFocus();
 
         // Calculate BMI when weight or height changes
         TextWatcher bmiCalculator = new TextWatcher() {
@@ -113,7 +126,145 @@ public class ScreeningFormFragment extends Fragment {
         editWeight.addTextChangedListener(bmiCalculator);
         editHeight.addTextChangedListener(bmiCalculator);
 
+        // Add BP validation
+        TextWatcher bpValidator = new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                validateBloodPressure();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+        };
+
+        editSystolicBp.addTextChangedListener(bpValidator);
+        editDiastolicBp.addTextChangedListener(bpValidator);
+
+        // Add glucose validation
+        editGlucose.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                validateGlucose();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {}
+        });
+
         buttonSubmitScreening.setOnClickListener(v -> submitScreening());
+    }
+
+    private void clearForm() {
+        editSystolicBp.setText("");
+        editDiastolicBp.setText("");
+        editGlucose.setText("");
+        editWeight.setText("");
+        editHeight.setText("");
+        textBmi.setText("BMI: --");
+        textBpStatus.setVisibility(View.GONE);
+        textGlucoseStatus.setVisibility(View.GONE);
+        textBmiStatus.setVisibility(View.GONE);
+        switchFamilyHistoryDiabetes.setChecked(false);
+        switchFamilyHistoryHypertension.setChecked(false);
+        switchSmoking.setChecked(false);
+        switchPhysicalInactivity.setChecked(false);
+        switchUnhealthyDiet.setChecked(false);
+        Toast.makeText(getContext(), "Form cleared", Toast.LENGTH_SHORT).show();
+    }
+
+    private void validateBloodPressure() {
+        try {
+            String systolicStr = editSystolicBp.getText().toString();
+            String diastolicStr = editDiastolicBp.getText().toString();
+
+            if (!systolicStr.isEmpty() && !diastolicStr.isEmpty()) {
+                double systolic = Double.parseDouble(systolicStr);
+                double diastolic = Double.parseDouble(diastolicStr);
+                String category = HealthDataValidator.categorizeBloodPressure(systolic, diastolic);
+                
+                textBpStatus.setText("Status: " + category);
+                textBpStatus.setVisibility(View.VISIBLE);
+                
+                if (category.contains("Normal")) {
+                    textBpStatus.setTextColor(0xFF4CAF50);
+                } else if (category.contains("Elevated") || category.contains("Stage 1")) {
+                    textBpStatus.setTextColor(0xFFFF9800);
+                } else {
+                    textBpStatus.setTextColor(0xFFF44336);
+                }
+            } else {
+                textBpStatus.setVisibility(View.GONE);
+            }
+        } catch (NumberFormatException e) {
+            textBpStatus.setVisibility(View.GONE);
+        }
+    }
+
+    private void validateGlucose() {
+        try {
+            String glucoseStr = editGlucose.getText().toString();
+
+            if (!glucoseStr.isEmpty()) {
+                double glucose = Double.parseDouble(glucoseStr);
+                String category = HealthDataValidator.categorizeGlucose(glucose);
+                
+                textGlucoseStatus.setText("Status: " + category);
+                textGlucoseStatus.setVisibility(View.VISIBLE);
+                
+                if (category.contains("Normal")) {
+                    textGlucoseStatus.setTextColor(0xFF4CAF50);
+                } else if (category.contains("Prediabetic")) {
+                    textGlucoseStatus.setTextColor(0xFFFF9800);
+                } else {
+                    textGlucoseStatus.setTextColor(0xFFF44336);
+                }
+            } else {
+                textGlucoseStatus.setVisibility(View.GONE);
+            }
+        } catch (NumberFormatException e) {
+            textGlucoseStatus.setVisibility(View.GONE);
+        }
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Refresh patient list when returning to this fragment
+        loadPatients();
+    }
+
+    private void loadPatients() {
+        patientViewModel.getPatients().observe(getViewLifecycleOwner(), patients -> {
+            if (patients != null && !patients.isEmpty()) {
+                List<String> patientNames = new ArrayList<>();
+                for (Patient patient : patients) {
+                    patientNames.add(patient.getFullName() + " (" + patient.getNationalId() + ")");
+                }
+                
+                ArrayAdapter<String> adapter = new ArrayAdapter<>(requireContext(),
+                    android.R.layout.simple_dropdown_item_1line, patientNames);
+                spinnerPatient.setAdapter(adapter);
+                
+                // Pre-select if patient already selected
+                Patient selectedPatient = patientViewModel.getSelectedPatient().getValue();
+                if (selectedPatient != null && selectedPatient.getPatientId() > 0) {
+                    String selectedName = selectedPatient.getFullName() + " (" + selectedPatient.getNationalId() + ")";
+                    spinnerPatient.setText(selectedName, false);
+                }
+                
+                // Handle patient selection
+                spinnerPatient.setOnItemClickListener((parent, view1, position, id) -> {
+                    Patient selected = patients.get(position);
+                    patientViewModel.selectPatient(selected.getPatientId());
+                });
+            }
+        });
     }
 
     private void calculateBMI() {
@@ -128,16 +279,43 @@ public class ScreeningFormFragment extends Fragment {
                 if (HealthDataValidator.isValidWeight(weight) && HealthDataValidator.isValidHeight(height)) {
                     double bmi = HealthDataValidator.calculateBMI(weight, height);
                     textBmi.setText(String.format("BMI: %.1f", bmi));
+                    
+                    String bmiCategory = getBmiCategory(bmi);
+                    textBmiStatus.setText("Category: " + bmiCategory);
+                    textBmiStatus.setVisibility(View.VISIBLE);
+                    
+                    if (bmi >= 18.5 && bmi < 25) {
+                        textBmiStatus.setTextColor(0xFF4CAF50);
+                    } else if ((bmi >= 25 && bmi < 30) || (bmi >= 17 && bmi < 18.5)) {
+                        textBmiStatus.setTextColor(0xFFFF9800);
+                    } else {
+                        textBmiStatus.setTextColor(0xFFF44336);
+                    }
                 } else {
                     textBmi.setText("BMI: Invalid values");
+                    textBmiStatus.setVisibility(View.GONE);
                 }
             }
         } catch (NumberFormatException e) {
             textBmi.setText("BMI: --");
+            textBmiStatus.setVisibility(View.GONE);
         }
     }
 
+    private String getBmiCategory(double bmi) {
+        if (bmi < 17) return "Severely Underweight";
+        if (bmi < 18.5) return "Underweight";
+        if (bmi < 25) return "Normal";
+        if (bmi < 30) return "Overweight";
+        if (bmi < 35) return "Obese Class I";
+        if (bmi < 40) return "Obese Class II";
+        return "Obese Class III";
+    }
+
     private void submitScreening() {
+        progressBar.setVisibility(View.VISIBLE);
+        buttonSubmitScreening.setEnabled(false);
+        
         try {
             // Validate and collect observations
             List<Observation> observations = new ArrayList<>();
@@ -283,11 +461,29 @@ public class ScreeningFormFragment extends Fragment {
             screeningViewModel.saveScreening(screening);
             screeningViewModel.setCurrentScreening(screening);
 
-            Toast.makeText(getContext(), "Screening completed. Risk Score: " + riskScore, Toast.LENGTH_SHORT).show();
-            Navigation.findNavController(getView()).navigate(R.id.action_screening_form_to_screening_results);
+            progressBar.setVisibility(View.GONE);
+            buttonSubmitScreening.setEnabled(true);
+
+            showSuccessDialog(riskScore);
         } catch (NumberFormatException e) {
+            progressBar.setVisibility(View.GONE);
+            buttonSubmitScreening.setEnabled(true);
             Toast.makeText(getContext(), "Please enter valid numeric values", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void showSuccessDialog(int riskScore) {
+        new androidx.appcompat.app.AlertDialog.Builder(requireContext())
+            .setTitle("✓ Screening Completed")
+            .setMessage("Screening saved successfully!\n\nRisk Score: " + riskScore + "\n\nWould you like to view the results?")
+            .setPositiveButton("View Results", (dialog, which) -> {
+                Navigation.findNavController(getView()).navigate(R.id.action_screening_form_to_screening_results);
+            })
+            .setNegativeButton("Done", (dialog, which) -> {
+                clearForm();
+            })
+            .setCancelable(false)
+            .show();
     }
 
     private void addQuestionnaire(List<Questionnaire> questionnaires, String questionCode, boolean isChecked) {

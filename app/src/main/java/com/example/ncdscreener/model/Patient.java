@@ -8,6 +8,7 @@ import java.util.Date;
  */
 public class Patient {
     private int patientId;
+    private String fhirId; // FHIR server ID
     private int nationalId;
     private String firstName;
     private String lastName;
@@ -39,6 +40,14 @@ public class Patient {
 
     public void setPatientId(int patientId) {
         this.patientId = patientId;
+    }
+
+    public String getFhirId() {
+        return fhirId;
+    }
+
+    public void setFhirId(String fhirId) {
+        this.fhirId = fhirId;
     }
 
     public int getNationalId() {

@@ -323,17 +323,7 @@ public class RegisterPatientFragment extends Fragment {
             // Post back to main thread for UI operations
             if (getActivity() != null) {
                 getActivity().runOnUiThread(() -> {
-                    Toast.makeText(getContext(), "Patient registered successfully", Toast.LENGTH_SHORT).show();
-                    
-                    // Select the saved patient
-                    if (savedPatient != null && savedPatient.getPatientId() > 0) {
-                        viewModel.selectPatient(savedPatient.getPatientId());
-                    }
-                    
-                    // Navigate back to patient list
-                    if (getView() != null && isAdded()) {
-                        Navigation.findNavController(getView()).navigateUp();
-                    }
+                    showSuccessDialog("Patient registered successfully!", savedPatient);
                 });
             }
         }).start();
@@ -375,12 +365,31 @@ public class RegisterPatientFragment extends Fragment {
             // Update patient
             viewModel.updatePatient(selectedPatient);
             
-            Toast.makeText(getContext(), "Patient updated successfully", Toast.LENGTH_SHORT).show();
-            // Navigate to patient detail
-            Navigation.findNavController(getView()).navigate(R.id.action_register_patient_to_patient_detail);
+            showSuccessDialog("Patient updated successfully!", selectedPatient);
         } catch (Exception e) {
             Toast.makeText(getContext(), "Error updating patient", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void showSuccessDialog(String message, Patient patient) {
+        new androidx.appcompat.app.AlertDialog.Builder(requireContext())
+            .setTitle("✓ Success")
+            .setMessage(message + "\n\nPatient: " + patient.getFullName())
+            .setPositiveButton("View Details", (dialog, which) -> {
+                if (patient != null && patient.getPatientId() > 0) {
+                    viewModel.selectPatient(patient.getPatientId());
+                }
+                if (getView() != null && isAdded()) {
+                    Navigation.findNavController(getView()).navigate(R.id.action_register_patient_to_patient_detail);
+                }
+            })
+            .setNegativeButton("Done", (dialog, which) -> {
+                if (getView() != null && isAdded()) {
+                    Navigation.findNavController(getView()).navigateUp();
+                }
+            })
+            .setCancelable(false)
+            .show();
     }
 }
 

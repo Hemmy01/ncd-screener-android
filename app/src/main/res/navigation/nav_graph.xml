@@ -111,6 +111,11 @@
             app:destination="@id/screeningResultsFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_screening_form_to_register_patient"
+            app:destination="@id/registerPatientFragment"
+            app:enterAnim="@anim/slide_up"
+            app:exitAnim="@anim/fade_out" />
     </fragment>
 
     <fragment

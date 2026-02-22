@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -40,6 +41,7 @@ public class ScreeningResultsFragment extends Fragment {
     private TextView textRiskScore;
     private TextView textRiskLevel;
     private TextView textRecommendations;
+    private ProgressBar progressRisk;
     private RecyclerView recyclerViewObservations;
     private RecyclerView recyclerViewConditions;
     private RecyclerView recyclerViewQuestionnaires;
@@ -67,6 +69,7 @@ public class ScreeningResultsFragment extends Fragment {
         textRiskScore = view.findViewById(R.id.text_risk_score);
         textRiskLevel = view.findViewById(R.id.text_risk_level);
         textRecommendations = view.findViewById(R.id.text_recommendations);
+        progressRisk = view.findViewById(R.id.progress_risk);
         recyclerViewObservations = view.findViewById(R.id.recycler_view_observations);
         recyclerViewConditions = view.findViewById(R.id.recycler_view_conditions);
         recyclerViewQuestionnaires = view.findViewById(R.id.recycler_view_questionnaires);
@@ -113,6 +116,7 @@ public class ScreeningResultsFragment extends Fragment {
 
         textRiskScore.setText(String.valueOf(riskScore));
         textRiskLevel.setText(riskLevel);
+        progressRisk.setProgress(riskScore);
 
         // Set risk score card color based on level
         int colorRes;
